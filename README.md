@@ -2,7 +2,7 @@
 
 **Every customer call, understood.** CallSense transcribes a business's sales and support calls in Hindi, English or Hinglish, picks up each customer's mood and the key details, puts them in a live dashboard, and lets owners ask ChatGPT or Claude about their calls. Set up and customised per business, for teams across India.
 
-This repo is the marketing site and the free-trial request backend.
+This repo is the marketing site and the demo request backend.
 
 ## Who it's for
 

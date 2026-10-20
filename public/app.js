@@ -40,7 +40,7 @@
     items.forEach((el) => el.classList.add("in"));
   }
 
-  // ---------- trial form ----------
+  // ---------- demo form ----------
   const form = document.getElementById("lead-form");
   if (!form) return;
   const done = document.getElementById("lead-done");

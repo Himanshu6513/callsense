@@ -1,4 +1,4 @@
-// CallSense (callsense.in): marketing site + free-trial / demo request capture.
+// CallSense (callsense.in): marketing site + demo request capture.
 // Serves the static site from /public and stores requests in Postgres (table: callsense_leads).
 import express from "express";
 import pg from "pg";
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS callsense_leads (
   status         TEXT NOT NULL DEFAULT 'new'
 );
 CREATE INDEX IF NOT EXISTS callsense_leads_created_at_idx ON callsense_leads (created_at DESC);
-COMMENT ON TABLE callsense_leads IS 'Free-trial and demo requests from callsense.in. status: new / contacted / trial / won / lost.';
+COMMENT ON TABLE callsense_leads IS 'Demo requests from callsense.in. status: new / contacted / won / lost.';
 `;
 
 let dbReady = false;
@@ -216,7 +216,7 @@ app.post("/api/leads", express.json({ limit: "20kb" }), async (req, res) => {
         lead.utm_campaign, lead.referrer, lead.landing_page, clean(req.get("user-agent") || "", 400) || null,
       ]
     );
-    console.log(`New trial request (industry=${lead.industry}).`);
+    console.log(`New demo request (industry=${lead.industry}).`);
     res.status(201).json({ ok: true });
   } catch (e) {
     console.error("Insert failed:", e.message);

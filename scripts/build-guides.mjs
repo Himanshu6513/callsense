@@ -44,7 +44,7 @@ function shell({ title, description, canonical, jsonld, body }) {
   <header class="nav scrolled">
     <div class="nav-inner">
       <a class="brand" href="/" aria-label="CallSense home">${MARK}<span>CallSense</span></a>
-      <a class="btn btn-sm" href="/#trial">Free trial</a>
+      <a class="btn btn-sm" href="/#demo">Book a demo</a>
     </div>
   </header>
   <main class="page">
@@ -165,7 +165,7 @@ ${g.sections.map(([h, html]) => `      <h2>${esc(h)}</h2>\n      ${html}`).join(
 ${g.faq.map(([q, a]) => `      <h3>${esc(q)}</h3>\n      <p>${esc(a)}</p>`).join("\n")}
       <div class="cta-box">
         <p><strong>Want this for your own calls?</strong> CallSense transcribes your team's calls in Hindi, English or Hinglish, pulls out mood and key details into a live dashboard, and lets you ask ChatGPT about them.</p>
-        <p><a class="btn" href="/#trial">Start a 2-week free trial</a> <a class="link-arrow" href="/#how">How it works</a></p>
+        <p><a class="btn" href="/#demo">Book a demo</a> <a class="link-arrow" href="/#how">How it works</a></p>
       </div>
     </article>`;
   return shell({ title: g.title, description: g.description, canonical: url, jsonld, body });

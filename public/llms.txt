@@ -14,7 +14,7 @@
 
 ## Languages
 
-Hindi, English and Hinglish work best. Marathi, Gujarati, Bengali, Tamil, Telugu, Kannada, Malayalam and Punjabi are supported and tested on the business's own calls during the free trial.
+Hindi, English and Hinglish work best. Marathi, Gujarati, Bengali, Tamil, Telugu, Kannada, Malayalam and Punjabi are supported and tested on a few of the business's own calls before starting.
 
 ## Who it is for
 
@@ -29,7 +29,7 @@ Hindi, English and Hinglish work best. Marathi, Gujarati, Bengali, Tamil, Telugu
 - Starter: ₹5,999 a month, 1 to 3 callers, 1,500 call minutes.
 - Team: ₹11,999 a month, 4 to 10 callers, 5,000 call minutes.
 - Pro: ₹19,999 a month, 11 to 25 callers, 12,000 call minutes, weekly owner report.
-- Extra minutes ₹1.50 each. One-time setup ₹15,000 (₹25,000 on Pro), charged only if the business continues after a 2-week free trial.
+- Extra minutes ₹1.50 each. One-time setup ₹15,000 (₹25,000 on Pro).
 
 ## Privacy
 
@@ -53,5 +53,5 @@ Each business's calls are kept in their own private database, sent over encrypte
 
 ## Contact
 
-- Free trial: https://callsense.in/#trial
+- Book a demo: https://callsense.in/#demo
 - Email: himanshu@callsense.in
