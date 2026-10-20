@@ -24,13 +24,6 @@ Hindi, English and Hinglish work best. Marathi, Gujarati, Bengali, Tamil, Telugu
 - Clinics and hospitals: reason for calling, department, booked or not, fee and insurance questions.
 - Also insurance and loan agents, car and bike dealers, travel agencies and B2B sales teams.
 
-## Pricing (INR, plus 18% GST)
-
-- Starter: ₹5,999 a month, 1 to 3 callers, 1,500 call minutes.
-- Team: ₹11,999 a month, 4 to 10 callers, 5,000 call minutes.
-- Pro: ₹19,999 a month, 11 to 25 callers, 12,000 call minutes, weekly owner report.
-- Extra minutes ₹1.50 each. One-time setup ₹15,000 (₹25,000 on Pro).
-
 ## Privacy
 
 Each business's calls are kept in their own private database, sent over encrypted connections, seen only by people the business approves, never sold and never used to train AI models, and deleted on request. Handled in line with India's Digital Personal Data Protection Act, 2023.
