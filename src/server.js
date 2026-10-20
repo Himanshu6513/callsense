@@ -74,7 +74,7 @@ const INDUSTRIES = new Set([
 ]);
 const TEAM = new Set(["1_3", "4_10", "11_25", "26_plus"]);
 const CALLS = new Set(["under_50", "50_200", "200_500", "500_plus"]);
-const SYSTEMS = new Set(["superfone", "exotel", "myoperator", "knowlarity", "ozonetel", "mobile_sim", "other", "not_sure"]);
+const SYSTEMS = new Set(["superfone", "exotel", "myoperator", "knowlarity", "ozonetel", "mobile_sim", "panel_dialer", "other", "not_sure"]);
 const LANGS = new Set(["hindi", "english", "hinglish", "marathi", "gujarati", "bengali", "tamil", "telugu", "kannada", "malayalam", "punjabi", "other"]);
 const EMAIL_RE = /^[^\s@]{1,64}@[^\s@]{1,190}\.[a-z]{2,24}$/i;
 

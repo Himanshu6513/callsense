@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="/styles.css?v=2">
+  <link rel="stylesheet" href="/styles.css?v=3">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -80,16 +80,19 @@
             <li>Budget, BHK, location and site-visit status from every enquiry call, filled in automatically</li>
             <li>An alert when a hot lead hasn't been called back in 24 hours</li>
             <li>Agent-wise report: calls, site visits booked, leads gone cold</li>
+            <li>Calls matched to their 99acres, MagicBricks, Housing or Facebook lead, so you see which leads were never called</li>
           </ul>
           <ul class="ticks hero-ticks" data-show="coaching">
             <li>Course, exam, class and fee concerns from every admission call</li>
             <li>Keen parents who never got a call back, listed every morning</li>
             <li>Counsellor-wise and centre-wise: calls, demo classes, admissions</li>
+            <li>Meta ad and website enquiries matched to their calls, so you see who was never called, or called too late</li>
           </ul>
           <ul class="ticks hero-ticks" data-show="d2c">
             <li>Cancel reasons from every COD confirmation call, counted by product</li>
             <li>NDR calls too: not available, fake attempt, reschedule, by courier and pin code</li>
             <li>Product complaints and size issues spotted the same day</li>
+            <li>Calls matched to their Shopify order, so you see which confirmed orders still came back as RTO</li>
           </ul>
           <ul class="ticks hero-ticks" data-show="clinic">
             <li>Who asked for an appointment and didn't book, and why</li>
@@ -335,7 +338,7 @@
           <li class="card reveal"><span class="step-n">2</span><h3>Each call is analysed</h3><p>When a call ends, the recording comes to us. Within minutes it is transcribed, and the mood, key details and next step are pulled out.</p></li>
           <li class="card reveal"><span class="step-n">3</span><h3>You see it and ask it</h3><p>Open the dashboard, get alerts and the weekly report, or ask ChatGPT or Claude about any call, any agent, any week.</p></li>
         </ol>
-        <p class="note reveal">Setup takes about a week. We do it with you on a call, and your team doesn't need to change anything.</p>
+        <p class="note reveal">Setup takes about a week, done with you on a call. On Superfone or Exotel your team changes nothing. On personal mobiles, we first help you move to a business calling app.</p>
       </div>
     </section>
 
@@ -403,7 +406,7 @@
             <ul class="ticks"><li>11 to 25 callers</li><li>12,000 call minutes a month</li><li>Weekly owner report and priority support</li></ul>
           </div>
         </div>
-        <p class="note reveal">One-time setup: ₹15,000 (₹25,000 on Pro), charged only if you continue after the trial. Extra minutes ₹1.50 each. Prices are plus 18% GST, so 8 callers on Team come to ₹14,159 a month. More than 25 callers or several branches? We'll quote you. No long contract: stop any month.</p>
+        <p class="note reveal">One-time setup: ₹15,000 (₹25,000 on Pro), charged only if you continue after the trial. Extra minutes ₹1.50 each. Prices are plus 18% GST, so 8 callers on Team come to ₹14,159 a month. Most sales calls run 2 to 5 minutes, so 5,000 minutes is roughly 1,000 to 2,500 calls; we show you your real usage during the trial. More than 25 callers or several branches? We'll quote you. No long contract: stop any month.</p>
       </div>
     </section>
 
@@ -450,7 +453,7 @@
         <div class="sec-head center reveal">
           <p class="eyebrow">2-week free trial</p>
           <h2>See what your calls are telling you.</h2>
-          <p class="sec-lede">Tell us a little about your business. We'll call or WhatsApp you within one working day to set up the trial on your own calls. Only the first five fields are needed.</p>
+          <p class="sec-lede">Tell us a little about your business. We'll call or WhatsApp you within one working day to set up the trial on your own calls. Only name, mobile, business name and business type are needed.</p>
         </div>
 
         <form class="form card" id="lead-form" novalidate>
@@ -481,7 +484,7 @@
           </fieldset>
 
           <div class="row2">
-            <label class="field"><span>Callers / counsellors</span>
+            <label class="field"><span>Callers (agents, counsellors)</span>
               <select name="team_size"><option value="">Choose</option><option value="1_3">1 to 3</option><option value="4_10">4 to 10</option><option value="11_25">11 to 25</option><option value="26_plus">26 or more</option></select>
             </label>
             <label class="field"><span>Calls a day (whole team)</span>
@@ -489,7 +492,7 @@
             </label>
           </div>
           <label class="field"><span>Calling system</span>
-            <select name="phone_system"><option value="">Choose</option><option value="superfone">Superfone</option><option value="exotel">Exotel</option><option value="myoperator">MyOperator</option><option value="knowlarity">Knowlarity</option><option value="ozonetel">Ozonetel</option><option value="mobile_sim">Personal mobiles</option><option value="other">Other</option><option value="not_sure">Not sure</option></select>
+            <select name="phone_system"><option value="">Choose</option><option value="superfone">Superfone</option><option value="exotel">Exotel</option><option value="myoperator">MyOperator</option><option value="knowlarity">Knowlarity</option><option value="ozonetel">Ozonetel</option><option value="mobile_sim">Personal mobiles</option><option value="panel_dialer">Dialer in shipping / COD panel</option><option value="other">Other</option><option value="not_sure">Not sure</option></select>
           </label>
 
           <fieldset class="field">
