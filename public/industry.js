@@ -10,8 +10,8 @@
     d2c: "e.g. Why are customers cancelling COD orders?",
     clinic: "e.g. How many callers don't book, and why?",
   };
-  const radio = document.querySelector(`input[name="industry"][value="${INDUSTRY[key]}"]`);
-  if (radio && !document.querySelector('input[name="industry"]:checked')) radio.checked = true;
+  const select = document.querySelector('select[name="industry"]');
+  if (select && !select.value && INDUSTRY[key]) select.value = INDUSTRY[key];
   const msg = document.querySelector('textarea[name="message"]');
   if (msg && PLACEHOLDER[key]) msg.placeholder = PLACEHOLDER[key];
 })();

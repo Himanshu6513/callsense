@@ -18,11 +18,24 @@ Hindi, English and Hinglish work best. Marathi, Gujarati, Bengali, Tamil, Telugu
 
 ## Who it is for
 
-- Real estate builders, brokers and channel partners: budget, BHK, location, loan need, site visit booked, why not.
-- Coaching institutes and edtech admission teams: course, exam, class, fee objections, demo booked.
-- D2C brands with COD confirmation and support calls: cancel reasons, RTO risk, product complaints, orders saved.
-- Clinics and hospitals: reason for calling, department, booked or not, fee and insurance questions.
-- Also insurance and loan agents, car and bike dealers, travel agencies and B2B sales teams.
+Any business that talks to customers on the phone, for example:
+
+- Real estate: leads never called back
+- Coaching & edtech: parents not followed up
+- D2C & e-commerce: why cod orders cancel
+- Clinics & hospitals: appointments not booked
+- Insurance: policies not closed
+- Loans & NBFCs: applications dropped
+- Car & bike dealers: test drives not booked
+- Travel & tours: enquiries gone cold
+- B2B & manufacturing: quotes not chased
+- Solar & home services: site visits missed
+- Interiors & furniture: quotes never followed up
+- Hotels & banquets: bookings lost
+- Schools & colleges: admissions missed
+- Recruitment & staffing: candidates dropped
+- Gyms & salons: trials not converted
+- Software & SaaS: demos not booked
 
 ## Privacy
 
@@ -46,5 +59,5 @@ Each business's calls are kept in their own private database, sent over encrypte
 
 ## Contact
 
-- Missed-lead report (we review the last 30 days of a team's calls and show the hot leads nobody called back): https://callsense.in/#demo
+- Call report (we review the last 30 days of a team's calls and show what was missed): https://callsense.in/#demo
 - Email: himanshu@callsense.in

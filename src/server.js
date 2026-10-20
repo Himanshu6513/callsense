@@ -70,7 +70,8 @@ async function initDb() {
 
 // ---------- validation ----------
 const INDUSTRIES = new Set([
-  "real_estate", "coaching", "d2c", "clinic", "insurance_loans", "automobile", "travel", "b2b_sales", "other",
+  "real_estate", "coaching", "d2c", "clinic", "insurance", "loans", "automobile", "travel", "b2b_sales", "home_services", "interiors", "hospitality", "education", "recruitment", "fitness_beauty", "saas",
+  "insurance_loans", "other",
 ]);
 const TEAM = new Set(["1_3", "4_10", "11_25", "26_plus"]);
 const CALLS = new Set(["under_50", "50_200", "200_500", "500_plus"]);
