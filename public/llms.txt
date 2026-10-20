@@ -46,5 +46,5 @@ Each business's calls are kept in their own private database, sent over encrypte
 
 ## Contact
 
-- Book a demo: https://callsense.in/#demo
+- Missed-lead report (we review the last 30 days of a team's calls and show the hot leads nobody called back): https://callsense.in/#demo
 - Email: himanshu@callsense.in
