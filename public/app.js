@@ -95,9 +95,9 @@
     const errs = {};
     const n = d.phone.replace(/\D/g, "").length;
     if (d.full_name.length < 2) errs.full_name = "Please enter your name.";
-    if (n < 10 || n > 13) errs.phone = "Please enter a 10-digit mobile number.";
+    if (n < 7 || n > 15) errs.phone = "Please enter your phone number, with country code if outside India.";
     if (d.email && !/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(d.email)) errs.email = "Please check this email address.";
-    if (d.company.length < 2) errs.company = "Please enter your business name.";
+    if (d.company.length < 2) errs.company = "Please enter your company name.";
     if (!d.industry) errs.industry = "Please choose your business type.";
     return errs;
   }

@@ -1,20 +1,20 @@
 # CallSense
 
-> CallSense uses AI to check every sales and support call a business's team makes, in any language (including Hindi and Hinglish), and shows who needs a call back, how each customer felt, what they wanted, why they did not buy, and which agent converts. Details from each call go into a live dashboard with alerts, and owners can ask ChatGPT or Claude about their calls. It works for any business in India that talks to customers on the phone, and is set up for each business. The first step is a call report: the last 30 days of calls checked, with what the team missed sent on WhatsApp within 48 hours.
+> CallSense uses AI to check every sales and support call a business's team makes, in 50+ languages, and shows who needs a call back, how each customer felt, what they wanted, why they did not buy, and which agent converts. Details from each call go into a live dashboard with alerts, and owners can ask ChatGPT or Claude about their calls. It is built for Indian businesses, and works for any business worldwide that talks to customers on the phone, and is set up for each business. The first step is a call report: the last 30 days of calls checked, with what the team missed sent on WhatsApp within 48 hours.
 
 ## What we deliver
 
-- Every call transcribed automatically after it ends, from the business's calling system (Superfone today; other systems that save recordings, such as Exotel, MyOperator, Knowlarity and Ozonetel, on request).
+- Every call transcribed automatically after it ends, from the business's calling system (Superfone, Exotel, MyOperator, Knowlarity, Aircall, RingCentral and most systems that record calls).
 - Mood and intent labels for each call (for example keen, unsure, angry, just browsing), with the reason.
 - Key details pulled out of every call into the same fields, chosen with the business: budget, product or course, appointment, order, objection, next step.
 - A live dashboard: calls by agent, outcomes, lost reasons, follow-ups due.
 - Alerts (for example a hot lead not called back in 24 hours) and a weekly owner report.
-- A private, read-only connection so owners can ask ChatGPT or Claude about their calls in Hindi or English.
+- A private, read-only connection so owners can ask ChatGPT or Claude about their calls in plain language.
 - Customisation: fields, mood and lead labels, call-scoring checklist, objections and competitors to watch, alerts, languages.
 
 ## Languages
 
-Hindi, English and Hinglish work best. Marathi, Gujarati, Bengali, Tamil, Telugu, Kannada, Malayalam and Punjabi are supported and tested on a few of the business's own calls before starting.
+Hindi, English, Tamil, Telugu, Marathi, Bengali, Gujarati, Kannada, Arabic, Spanish and 50+ more, including calls that switch languages. Tested on a few of the business's own calls before starting. Reports come back in English.
 
 ## Who it is for
 
@@ -39,7 +39,7 @@ Any business that talks to customers on the phone, for example:
 
 ## Privacy
 
-Each business's calls are kept in their own private database, sent over encrypted connections, seen only by people the business approves, never sold and never used to train AI models, and deleted on request. Handled in line with India's Digital Personal Data Protection Act, 2023.
+Each business's calls are kept in their own private database, sent over encrypted connections, seen only by people the business approves, never sold and never used to train AI models, and deleted on request. Handled in line with India's Digital Personal Data Protection Act (DPDP) and, for customers in Europe, GDPR.
 
 ## Key pages
 
@@ -52,7 +52,7 @@ Each business's calls are kept in their own private database, sent over encrypte
 
 ## Guides
 
-- [How to analyse sales call recordings in Hindi and Hinglish](https://callsense.in/guides/analyse-sales-call-recordings-in-hindi)
+- [How to analyse sales calls in Hindi and other languages](https://callsense.in/guides/analyse-sales-call-recordings-in-hindi)
 - [Superfone call recordings: how to get insights and ask ChatGPT](https://callsense.in/guides/superfone-call-recording-analysis)
 - [Real estate sales calls: what to track to get more site visits](https://callsense.in/guides/real-estate-sales-call-tracking)
 - [What is call intelligence? A plain guide for Indian businesses](https://callsense.in/guides/what-is-call-intelligence)

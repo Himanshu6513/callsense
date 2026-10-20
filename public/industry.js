@@ -6,8 +6,8 @@
   const PLACEHOLDER = {
     general: "e.g. Why do good leads go cold after the first call?",
     realestate: "e.g. Why do site-visit leads go cold after the first call?",
-    coaching: "e.g. Which fee objections stop parents from taking admission?",
-    d2c: "e.g. Why are customers cancelling COD orders?",
+    coaching: "e.g. Which fee concerns stop parents from taking admission?",
+    d2c: "e.g. Why are customers cancelling orders?",
     clinic: "e.g. How many callers don't book, and why?",
   };
   const select = document.querySelector('select[name="industry"]');

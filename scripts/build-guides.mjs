@@ -68,22 +68,22 @@ const ORG = { "@type": "Organization", name: "CallSense", url: `${SITE}/`, logo:
 const guides = [
   {
     slug: "analyse-sales-call-recordings-in-hindi",
-    title: "How to Analyse Sales Call Recordings in Hindi and Hinglish",
-    short: "Analyse call recordings in Hindi",
-    description: "How Indian businesses turn Hindi, Hinglish and English call recordings into transcripts, lead details, mood and reports, without listening to every call.",
-    answer: "To analyse sales calls in Hindi or Hinglish, first collect the recordings from your calling system, transcribe them with a speech model that handles code-mixed Hindi and English, then pull the same fields out of every transcript (such as budget, product, objection and next step) and store them in a table. Once every call is a row, you can count, filter, chart and ask questions across all of them.",
+    title: "How to Analyse Sales Calls in Hindi and Other Languages",
+    short: "Analyse sales calls in any language",
+    description: "How businesses turn call recordings in Hindi, English or any other language into transcripts, lead details, mood and reports, without listening to every call.",
+    answer: "To analyse sales calls in Hindi or any other language, first collect the recordings from your calling system, transcribe them with a speech model that handles your customers' languages, including calls that mix two languages, then pull the same fields out of every transcript (such as budget, product, objection and next step) and store them in a table. Once every call is a row, you can count, filter, chart and ask questions across all of them.",
     sections: [
       ["Why listening to recordings doesn't work", `<p>A team of five making 60 calls a day each produces about 300 calls a day. Nobody can listen to that. Owners end up sampling a few calls, or relying on what the team writes in the CRM, which is usually short and often missing.</p>`],
       ["Step 1: Get every recording automatically", `<p>Business calling apps and cloud telephony providers such as Superfone, Exotel, MyOperator and Knowlarity save call recordings and can send them out as soon as a call ends, usually through a webhook. That means no one has to download files by hand.</p>`],
       ["Step 2: Transcribe in the language your customers speak", `<p>Most Indian sales calls switch between Hindi and English in the same sentence. Use a transcription model that handles this code-mixing, and keep the transcript in the words actually spoken, in Roman or Devanagari script, rather than a loose translation. Test it on 20 or 30 of your own calls before you rely on it, because accents, line quality and industry words all affect accuracy.</p>`],
       ["Step 3: Pull out the same fields from every call", `<p>A transcript is still too long to read. The value comes from turning each call into the same short set of fields. For example:</p><ul><li><strong>Real estate:</strong> budget, BHK, location, loan needed, site visit booked, reason for not booking.</li><li><strong>Coaching:</strong> course, exam, class, parent or student, fee concern, demo booked.</li><li><strong>D2C:</strong> order value, COD confirmed or cancelled, cancel reason, product complaint.</li></ul><p>Add a mood or intent label (keen, unsure, angry, just browsing) and a next step. Always keep a link back to the call so anyone can check.</p>`],
       ["Step 4: Put it where you'll actually look", `<p>Store each call as a row in a database, then show it in a simple dashboard: calls by agent, outcomes, top lost reasons, follow-ups due. Alerts help most: a message when a hot lead has not been called back in 24 hours is worth more than any chart.</p>`],
-      ["Step 5: Ask questions in plain language", `<p>Once the data is in a database, ChatGPT or Claude can read it through a private, read-only connector. Then an owner can ask “Is hafte kitne logon ne site visit ke liye haan bola?” and get the answer with the calls behind it.</p>`],
+      ["Step 5: Ask questions in plain language", `<p>Once the data is in a database, ChatGPT or Claude can read it through a private, read-only connector. Then an owner can ask “How many people agreed to a site visit this week?” and get the answer with the calls behind it.</p>`],
     ],
     faq: [
-      ["Can AI understand Hinglish phone calls?", "Yes. Current speech models handle Hindi and English mixed in the same sentence well on clear lines. Accuracy drops on noisy calls, so test on your own recordings first."],
+      ["Can AI understand calls that mix Hindi and English?", "Yes. Current speech models handle two languages mixed in the same sentence well on clear lines. Accuracy drops on noisy calls, so test on your own recordings first."],
       ["Do I need to translate calls into English?", "No. It is better to keep the transcript in the words spoken and pull the key details out in English, so your dashboard is consistent while the original stays checkable."],
-      ["Which Indian languages can be analysed?", "Hindi, English and Hinglish work best today. Marathi, Gujarati, Bengali, Tamil, Telugu, Kannada, Malayalam and Punjabi can also be handled, but you should test them on your own calls."],
+      ["Which languages can be analysed?", "Hindi, English, Tamil, Telugu, Marathi, Bengali, Gujarati, Kannada and 50+ other languages, including Arabic and Spanish. Accuracy varies by language and line quality, so test on your own calls first."],
     ],
   },
   {
@@ -114,7 +114,7 @@ const guides = [
       ["Why calls are where deals are won or lost", `<p>Most property buyers first speak to someone on the phone, from a portal lead, an ad or a hoarding. What gets said on that first call, and how fast the follow-up happens, decides whether a site visit gets booked. Yet most of it never reaches the CRM.</p>`],
       ["The fields worth capturing from every call", `<ul><li><strong>Budget</strong> (for example ₹70 to 85 lakh)</li><li><strong>Configuration</strong>: 1, 2, 3 BHK, plot, villa</li><li><strong>Location</strong> and any project named</li><li><strong>Timeline</strong>: ready to move, under construction, just exploring</li><li><strong>Home loan</strong> needed or not</li><li><strong>Site visit</strong>: booked, date and time, or not booked</li><li><strong>Main objection</strong>: price, location, possession date, builder trust</li><li><strong>Lead temperature</strong> and <strong>next step</strong> with a date</li></ul>`],
       ["Three reports every owner should see weekly", `<ol><li><strong>Hot leads not called back</strong> within 24 hours.</li><li><strong>Reasons visits didn't happen</strong>, counted across all calls.</li><li><strong>Agent comparison</strong>: calls, visits booked, and how often each agent asks about budget and timeline.</li></ol>`],
-      ["How to capture it without extra work", `<p>Asking agents to type all this after every call rarely works. Recording calls through a business calling app and analysing them automatically fills these fields from the conversation itself, in Hindi, English or Hinglish, with a link back to the call.</p>`],
+      ["How to capture it without extra work", `<p>Asking agents to type all this after every call rarely works. Recording calls through a business calling app and analysing them automatically fills these fields from the conversation itself, in Hindi, English or any other language, with a link back to the call.</p>`],
     ],
     faq: [
       ["What is a good site-visit conversion rate from enquiry calls?", "It varies widely by city, project and lead source. Measure your own baseline from a few weeks of calls, then track it week by week rather than comparing with other businesses."],
@@ -129,7 +129,7 @@ const guides = [
     description: "Call intelligence (conversation intelligence) explained simply: what it does with your sales and support calls, what it costs, and who in India it suits.",
     answer: "Call intelligence is software that listens to recorded business calls and turns them into data: a transcript, the customer's mood and intent, key details like budget or product, the outcome and the next step. Owners and managers use it to see why customers buy or don't, coach their team and follow up on every lead, without listening to recordings.",
     sections: [
-      ["What it does, step by step", `<ol><li><strong>Records</strong> calls through your business calling system.</li><li><strong>Transcribes</strong> them, including Hindi and Hinglish.</li><li><strong>Understands</strong> each call: mood, intent, key details, objections, next step.</li><li><strong>Reports</strong> it in a dashboard, alerts and weekly summaries.</li><li><strong>Answers questions</strong> about your calls, increasingly through ChatGPT or Claude.</li></ol>`],
+      ["What it does, step by step", `<ol><li><strong>Records</strong> calls through your business calling system.</li><li><strong>Transcribes</strong> them, in 50+ languages.</li><li><strong>Understands</strong> each call: mood, intent, key details, objections, next step.</li><li><strong>Reports</strong> it in a dashboard, alerts and weekly summaries.</li><li><strong>Answers questions</strong> about your calls, increasingly through ChatGPT or Claude.</li></ol>`],
       ["Who it suits in India", `<p>Any business where a team makes or takes many customer calls a day: real estate builders and brokers, coaching institutes and edtech admission teams, D2C brands with COD confirmation and support calls, clinics and hospitals, insurance and loan agents, car dealers and travel agencies.</p>`],
       ["What it usually costs", `<p>Global tools are priced per user per month in dollars and often assume English-only calls. Services built for India are usually priced per month by call minutes or callers in rupees, with a setup fee for customising fields, labels and reports to the business.</p>`],
       ["What to check before you buy", `<ul><li>Does it handle your customers' languages, tested on your own calls?</li><li>Does it work with your calling system?</li><li>Can you choose the fields and labels that matter to your business?</li><li>Where is the data kept, who can see it, and can you delete it?</li></ul>`],
@@ -165,7 +165,7 @@ ${g.sections.map(([h, html]) => `      <h2>${esc(h)}</h2>\n      ${html}`).join(
       <h2>Frequently asked questions</h2>
 ${g.faq.map(([q, a]) => `      <h3>${esc(q)}</h3>\n      <p>${esc(a)}</p>`).join("\n")}
       <div class="cta-box">
-        <p><strong>Want this for your own calls?</strong> CallSense transcribes your team's calls in Hindi, English or Hinglish, pulls out mood and key details into a live dashboard, and lets you ask ChatGPT about them.</p>
+        <p><strong>Want this for your own calls?</strong> CallSense transcribes your team's calls in 50+ languages, pulls out mood and key details into a live dashboard, and lets you ask ChatGPT about them.</p>
         <p><a class="btn" href="/#demo">Get a missed-lead report</a> <a class="link-arrow" href="/#how">How it works</a></p>
       </div>
     </article>`;
@@ -178,12 +178,12 @@ function indexHtml() {
   const body = `    <div class="wrap narrow article">
       <p class="crumbs"><a href="/">Home</a> › Guides</p>
       <h1>Guides</h1>
-      <p class="answer">Plain answers on analysing sales and support calls in Hindi, English and Hinglish, for Indian businesses that sell on the phone.</p>
+      <p class="answer">Plain answers on analysing sales and support calls with AI, in any language, for businesses that sell on the phone.</p>
       <ul class="guide-list">
 ${guides.map((g) => `        <li><a href="/guides/${g.slug}"><strong>${esc(g.title)}</strong></a><span>${esc(g.description)}</span></li>`).join("\n")}
       </ul>
     </div>`;
-  return shell({ title: "Guides: Call Recording Analysis in India | CallSense", description: "Plain guides on analysing sales and support call recordings in Hindi, English and Hinglish, for real estate, coaching, D2C and clinics.", canonical: url, jsonld, body });
+  return shell({ title: "Guides: Call Recording Analysis in India | CallSense", description: "Plain guides on analysing sales and support call recordings with AI, in Hindi, English and 50+ languages, for teams that sell on the phone.", canonical: url, jsonld, body });
 }
 
 fs.mkdirSync(OUT, { recursive: true });

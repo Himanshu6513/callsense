@@ -257,6 +257,10 @@ html[data-ind="clinic"] [data-show]:not([data-show~="clinic"]) { display: none !
 .grid4 .card p { font-size: 15px; }
 @media (min-width: 1000px) { .grid4 { grid-template-columns: repeat(4, 1fr); gap: 16px; } .grid4 .card { padding: 28px 22px; } }
 
+/* centered short section */
+.center-text { text-align: center; }
+.center-text .sec-lede { margin-left: auto; margin-right: auto; }
+
 /* many industries: compact tiles */
 .ind-grid .card { padding: 16px 14px; }
 .ind-grid .card h3 { font-size: 16px; margin-bottom: 4px; }

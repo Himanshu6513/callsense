@@ -75,7 +75,10 @@ const INDUSTRIES = new Set([
 ]);
 const TEAM = new Set(["1_3", "4_10", "11_25", "26_plus"]);
 const CALLS = new Set(["under_50", "50_200", "200_500", "500_plus"]);
-const SYSTEMS = new Set(["superfone", "exotel", "myoperator", "knowlarity", "ozonetel", "mobile_sim", "panel_dialer", "other", "not_sure"]);
+const SYSTEMS = new Set([
+  "superfone", "exotel", "myoperator", "knowlarity", "ozonetel", "aircall", "ringcentral", "dialpad", "zoom_phone", "twilio",
+  "mobile_sim", "panel_dialer", "other", "not_sure",
+]);
 const LANGS = new Set(["hindi", "english", "hinglish", "marathi", "gujarati", "bengali", "tamil", "telugu", "kannada", "malayalam", "punjabi", "other"]);
 const EMAIL_RE = /^[^\s@]{1,64}@[^\s@]{1,190}\.[a-z]{2,24}$/i;
 
@@ -108,9 +111,9 @@ function validate(body) {
   };
   const n = digits(lead.phone).length;
   if (lead.full_name.length < 2) errors.full_name = "Please enter your name.";
-  if (n < 10 || n > 13) errors.phone = "Please enter a 10-digit mobile number.";
+  if (n < 7 || n > 15) errors.phone = "Please enter your phone number, with country code if outside India.";
   if (lead.email && !EMAIL_RE.test(lead.email)) errors.email = "Please check this email address.";
-  if (lead.company.length < 2) errors.company = "Please enter your business name.";
+  if (lead.company.length < 2) errors.company = "Please enter your company name.";
   if (!lead.industry) errors.industry = "Please choose your business type.";
   return { lead, errors };
 }
