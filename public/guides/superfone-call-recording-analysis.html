@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Superfone Call Recordings: How to Get Insights and Ask ChatGPT</title>
+  <meta name="description" content="How to take Superfone call recordings beyond single-call summaries: lead fields across every call, agent reports, alerts, and asking ChatGPT about your calls.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://callsense.in/guides/superfone-call-recording-analysis">
+  <meta property="og:site_name" content="CallSense">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Superfone Call Recordings: How to Get Insights and Ask ChatGPT">
+  <meta property="og:description" content="How to take Superfone call recordings beyond single-call summaries: lead fields across every call, agent reports, alerts, and asking ChatGPT about your calls.">
+  <meta property="og:url" content="https://callsense.in/guides/superfone-call-recording-analysis">
+  <meta property="og:image" content="https://callsense.in/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/styles.css?v=1">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Superfone Call Recordings: How to Get Insights and Ask ChatGPT","description":"How to take Superfone call recordings beyond single-call summaries: lead fields across every call, agent reports, alerts, and asking ChatGPT about your calls.","inLanguage":"en-IN","datePublished":"2026-10-20","dateModified":"2026-10-20","mainEntityOfPage":"https://callsense.in/guides/superfone-call-recording-analysis","image":"https://callsense.in/og-image.png","author":{"@type":"Organization","name":"CallSense","url":"https://callsense.in/","logo":"https://callsense.in/logo-512.png"},"publisher":{"@type":"Organization","name":"CallSense","url":"https://callsense.in/","logo":"https://callsense.in/logo-512.png"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does Superfone have webhooks?","acceptedAnswer":{"@type":"Answer","text":"Yes. Superfone webhooks are set up in its dashboard under Automations, and include events for all calls, missed calls, call recordings becoming available and call summaries being ready."}},{"@type":"Question","name":"Can I see which team member took the call on a shared Superfone number?","acceptedAnswer":{"@type":"Answer","text":"Yes. Call events include the staff member behind the business number, so each call can be credited to the right agent."}},{"@type":"Question","name":"Do my team need to install anything new?","acceptedAnswer":{"@type":"Answer","text":"No. They keep calling from Superfone. The analysis runs on the recordings after each call ends."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://callsense.in/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://callsense.in/guides/"},{"@type":"ListItem","position":3,"name":"Superfone call recording analysis","item":"https://callsense.in/guides/superfone-call-recording-analysis"}]}]}</script>
+</head>
+<body>
+  <header class="nav scrolled">
+    <div class="nav-inner">
+      <a class="brand" href="/" aria-label="CallSense home"><img class="brand-mark" src="/logo.svg" alt="" width="28" height="28"><span>CallSense</span></a>
+      <a class="btn btn-sm" href="/#trial">Free trial</a>
+    </div>
+  </header>
+  <main class="page">
+    <article class="wrap narrow article">
+      <p class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a></p>
+      <h1>Superfone Call Recordings: How to Get Insights and Ask ChatGPT</h1>
+      <p class="meta">Updated 20 October 2026 · CallSense</p>
+      <p class="answer"><strong>Short answer:</strong> Superfone records business calls and can send each recording to another system through its webhooks as soon as it is ready. Sending those recordings to a call-analysis service lets you transcribe them, fill in the same lead fields from every call, see totals and trends in a dashboard, get alerts, and ask ChatGPT or Claude questions across all your calls.</p>
+      <h2>What Superfone gives you already</h2>
+      <p>Superfone gives a business number that several team members can use, records calls, and offers AI summaries of individual calls. It can also notify other systems through webhooks set up in its Automations section, including when a call recording is available and when a call summary is ready.</p>
+      <h2>Where single-call summaries stop</h2>
+      <p>A summary tells you what happened on one call. Owners usually want answers across many calls: how many hot leads came in this week, why people didn't book, which agent converts best, who wasn't called back. That needs every call turned into the same fields and stored together.</p>
+      <h2>How the connection works</h2>
+      <ol><li>In Superfone, a webhook is pointed at the analysis service for the “call recording available” event.</li><li>When a call ends, the service receives the call details (number, agent, direction, duration) and a link to the recording.</li><li>It downloads the recording, transcribes it, pulls out your fields, mood and next step, and saves the result.</li><li>The dashboard, alerts and ChatGPT connection read from that saved data.</li></ol><p>Your team keeps using the Superfone app exactly as before.</p>
+      <h2>What you can ask once it's connected</h2>
+      <ul><li>“Which leads from this week said yes to a site visit but haven't had a confirmation call?”</li><li>“What were the top three reasons customers didn't buy last month?”</li><li>“Compare Rahul and Sunil: calls, average call length, and how many leads they moved forward.”</li></ul>
+      <h2>Frequently asked questions</h2>
+      <h3>Does Superfone have webhooks?</h3>
+      <p>Yes. Superfone webhooks are set up in its dashboard under Automations, and include events for all calls, missed calls, call recordings becoming available and call summaries being ready.</p>
+      <h3>Can I see which team member took the call on a shared Superfone number?</h3>
+      <p>Yes. Call events include the staff member behind the business number, so each call can be credited to the right agent.</p>
+      <h3>Do my team need to install anything new?</h3>
+      <p>No. They keep calling from Superfone. The analysis runs on the recordings after each call ends.</p>
+      <div class="cta-box">
+        <p><strong>Want this for your own calls?</strong> CallSense transcribes your team's calls in Hindi, English or Hinglish, pulls out mood and key details into a live dashboard, and lets you ask ChatGPT about them.</p>
+        <p><a class="btn" href="/#trial">Start a 2-week free trial</a> <a class="link-arrow" href="/#how">How it works</a></p>
+      </div>
+    </article>
+  </main>
+  <footer class="footer">
+    <div class="wrap foot">
+      <a class="brand" href="/" aria-label="CallSense home"><img class="brand-mark" src="/logo.svg" alt="" width="28" height="28"><span>CallSense</span></a>
+      <p>Every customer call, understood.<br>Contact: <a href="mailto:himanshu@callsense.in">himanshu@callsense.in</a></p>
+      <p class="foot-links"><a href="/real-estate">Real estate</a><a href="/coaching">Coaching</a><a href="/d2c">D2C brands</a><a href="/clinics">Clinics</a><a href="/guides/">Guides</a><a href="/privacy">Privacy</a></p>
+    </div>
+  </footer>
+</body>
+</html>

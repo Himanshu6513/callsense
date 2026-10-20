@@ -1,0 +1,13 @@
+{
+  "name": "callsense-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "CallSense (callsense.in) marketing site and trial-request backend (Express + Postgres)",
+  "scripts": { "start": "node src/server.js" },
+  "dependencies": {
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  },
+  "engines": { "node": ">=20" }
+}

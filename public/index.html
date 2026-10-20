@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en-IN" data-ind="realestate">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>CallSense · Call Recording Analysis in Hindi & English</title>
+  <meta name="description" content="We transcribe your team's sales calls in Hindi, English or Hinglish, pull out mood and key details into a live dashboard, and let you ask ChatGPT about them.">
+  <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://callsense.in/">
+  <meta property="og:site_name" content="CallSense">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:title" content="CallSense · Every customer call, understood">
+  <meta property="og:description" content="Your team's calls transcribed in Hindi, English or Hinglish, with each customer's mood and key details in a live dashboard. Then ask ChatGPT about any call.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://callsense.in/">
+  <meta property="og:image" content="https://callsense.in/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="CallSense: every customer call, understood">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CallSense · Every customer call, understood">
+  <meta name="twitter:description" content="Your team's calls transcribed in Hindi, English or Hinglish, with mood and key details in a live dashboard. Ask ChatGPT about any call.">
+  <meta name="twitter:image" content="https://callsense.in/og-image.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="Plain summary for AI assistants">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://callsense.in/#org","name":"CallSense","url":"https://callsense.in/","logo":"https://callsense.in/logo-512.png","email":"himanshu@callsense.in","areaServed":"IN"},{"@type":"WebSite","@id":"https://callsense.in/#website","url":"https://callsense.in/","name":"CallSense","inLanguage":"en-IN","publisher":{"@id":"https://callsense.in/#org"}},{"@type":"Service","@id":"https://callsense.in/#service","name":"CallSense call intelligence","serviceType":"Call recording transcription and analysis","provider":{"@id":"https://callsense.in/#org"},"areaServed":{"@type":"Country","name":"India"},"availableLanguage":["Hindi","English","Hinglish"],"audience":[{"@type":"BusinessAudience","audienceType":"Real estate builders and brokers"},{"@type":"BusinessAudience","audienceType":"Coaching institutes and edtech admission teams"},{"@type":"BusinessAudience","audienceType":"D2C brands with COD confirmation and support calls"},{"@type":"BusinessAudience","audienceType":"Clinics and hospitals"}],"description":"We record and transcribe a business's sales and support calls in Hindi, English or Hinglish, pick up each customer's mood and the key details, put them in a live dashboard, and let owners ask ChatGPT or Claude about their calls. Set up and customised for each business.","offers":[{"@type":"Offer","name":"Starter","price":"5999","priceCurrency":"INR","description":"1 to 3 callers, 1,500 call minutes a month, per month plus GST"},{"@type":"Offer","name":"Team","price":"11999","priceCurrency":"INR","description":"4 to 10 callers, 5,000 call minutes a month, per month plus GST"},{"@type":"Offer","name":"Pro","price":"19999","priceCurrency":"INR","description":"10 or more callers, 12,000 call minutes a month, per month plus GST"}]},{"@type":"FAQPage","@id":"https://callsense.in/#faq","mainEntity":[{"@type":"Question","name":"Which languages does CallSense understand?","acceptedAnswer":{"@type":"Answer","text":"Hindi, English and Hinglish work best. We also handle Marathi, Gujarati, Bengali, Tamil, Telugu, Kannada, Malayalam and Punjabi, and we test them on your own calls during the free trial before you pay anything."}},{"@type":"Question","name":"Which phone systems does it work with?","acceptedAnswer":{"@type":"Answer","text":"Superfone works today with no change for your team. Other business calling systems that save call recordings, such as Exotel, MyOperator, Knowlarity and Ozonetel, can usually be connected; tell us yours and we will confirm."}},{"@type":"Question","name":"Superfone already gives call summaries. What is different?","acceptedAnswer":{"@type":"Answer","text":"A summary describes one call. CallSense turns every call into the same fields you choose, such as budget, course or cancel reason, so you can see totals and trends across all calls, get alerts, and ask questions like which hot leads were not called back this week."}},{"@type":"Question","name":"Do I need a ChatGPT subscription?","acceptedAnswer":{"@type":"Answer","text":"The dashboard works without one. To ask questions in ChatGPT or Claude you need a plan that allows custom connectors, such as ChatGPT Plus or Business, or Claude Pro or Team."}},{"@type":"Question","name":"Is my call data safe?","acceptedAnswer":{"@type":"Answer","text":"Each business's calls are kept in its own private database, sent over encrypted connections and seen only by people you approve. We never sell your data or use it to train AI models, and we delete it when you ask."}}]}]}</script>
+  <!-- Picks the industry version before first paint, so the wrong example never flashes -->
+  <script src="/ind-init.js?v=1"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/styles.css?v=1">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="CallSense home">
+        <img class="brand-mark" src="/logo.svg" alt="" width="28" height="28">
+        <span>CallSense</span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Main">
+        <a href="#what">What you get</a>
+        <a href="#how">How it works</a>
+        <a href="#industries">Industries</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#security">Privacy</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-sm" href="#trial">Free trial</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Call intelligence for Indian businesses · Hindi, English, Hinglish</p>
+          <h1>Every customer call, <span class="grad">understood.</span></h1>
+          <p class="lede">We transcribe your team's calls, pick up each customer's mood and the key details, and put it all in a live dashboard. Then ask ChatGPT anything about your calls, in Hindi or English.</p>
+
+          <div class="aud" role="group" aria-label="My business">
+            <span class="aud-label">My business:</span>
+            <div class="aud-seg">
+              <button type="button" data-ind="realestate" aria-pressed="true">Real estate</button>
+              <button type="button" data-ind="coaching" aria-pressed="false">Coaching</button>
+              <button type="button" data-ind="d2c" aria-pressed="false">D2C / COD</button>
+              <button type="button" data-ind="clinic" aria-pressed="false">Clinic</button>
+            </div>
+          </div>
+
+          <ul class="ticks hero-ticks" data-show="realestate">
+            <li>Budget, BHK, location and site-visit status from every enquiry call</li>
+            <li>Hot leads flagged, and an alert when nobody calls them back</li>
+            <li>See which agent converts, and which one loses good leads</li>
+          </ul>
+          <ul class="ticks hero-ticks" data-show="coaching">
+            <li>Course, exam, class and fee concerns from every admission call</li>
+            <li>Parents who were keen but never got a call back, listed daily</li>
+            <li>See which counsellor books the most demo classes, and why</li>
+          </ul>
+          <ul class="ticks hero-ticks" data-show="d2c">
+            <li>Why customers cancel COD orders, counted across every call</li>
+            <li>Product complaints and size issues spotted the same day</li>
+            <li>See which agent saves the most orders from RTO</li>
+          </ul>
+          <ul class="ticks hero-ticks" data-show="clinic">
+            <li>Who asked for an appointment and didn't book, and why</li>
+            <li>Which treatments and doctors people call about most</li>
+            <li>How your front desk handles callers, call by call</li>
+          </ul>
+
+          <div class="cta-row">
+            <a class="btn" href="#trial">Start a 2-week free trial</a>
+            <a class="link-arrow" href="#how">See how it works</a>
+          </div>
+          <p class="fine">On your own calls. No new phones or apps for your team. Works with Superfone today.</p>
+        </div>
+
+        <div class="hero-visual" aria-label="Example of one call after CallSense has analysed it">
+          <p class="strip-label">One call, after CallSense</p>
+
+          <!-- Real estate -->
+          <article class="call" data-show="realestate">
+            <div class="call-bar"><span class="call-who">Rahul (sales) · Incoming · 6 min 12 s</span><span class="pill-ok">Analysed</span></div>
+            <div class="call-body">
+              <div class="quote">
+                <p><b>Customer:</b> “3 BHK chahiye Wakad mein, budget 85 lakh tak hai.”</p>
+                <p><b>Rahul:</b> “Sir, Saturday ko site visit rakh lein?”</p>
+                <p><b>Customer:</b> “Haan, 11 baje theek hai. Bas loan ka thoda tension hai.”</p>
+              </div>
+              <dl class="facts">
+                <div><dt>Budget</dt><dd>₹85 lakh</dd></div>
+                <div><dt>Looking for</dt><dd>3 BHK</dd></div>
+                <div><dt>Location</dt><dd>Wakad, Pune</dd></div>
+                <div><dt>Site visit</dt><dd>Sat, 11 am</dd></div>
+              </dl>
+              <div class="tags"><span class="tag tag-hot">Hot lead</span><span class="tag">Mood: interested, worried about loan</span></div>
+              <p class="next"><b>Next step:</b> share home-loan partner details before Saturday.</p>
+            </div>
+          </article>
+
+          <!-- Coaching -->
+          <article class="call" data-show="coaching">
+            <div class="call-bar"><span class="call-who">Neha (counsellor) · Incoming · 8 min 40 s</span><span class="pill-ok">Analysed</span></div>
+            <div class="call-body">
+              <div class="quote">
+                <p><b>Parent:</b> “Beta 11th mein hai, JEE ki taiyaari karni hai.”</p>
+                <p><b>Neha:</b> “Sunday ko free demo class hai, aa sakte hain?”</p>
+                <p><b>Parent:</b> “Fees thodi zyada hai. EMI ho sakti hai kya?”</p>
+              </div>
+              <dl class="facts">
+                <div><dt>Caller</dt><dd>Parent</dd></div>
+                <div><dt>Student</dt><dd>Class 11, JEE</dd></div>
+                <div><dt>Demo class</dt><dd>Sunday</dd></div>
+                <div><dt>Concern</dt><dd>Fees, asked for EMI</dd></div>
+              </dl>
+              <div class="tags"><span class="tag tag-warm">Warm lead</span><span class="tag">Mood: keen, price-sensitive</span></div>
+              <p class="next"><b>Next step:</b> send the EMI plan before Sunday's demo.</p>
+            </div>
+          </article>
+
+          <!-- D2C -->
+          <article class="call" data-show="d2c">
+            <div class="call-bar"><span class="call-who">Pooja (COD confirmation) · Outgoing · 2 min 05 s</span><span class="pill-ok">Analysed</span></div>
+            <div class="call-body">
+              <div class="quote">
+                <p><b>Pooja:</b> “Aapka ₹1,499 ka order cash on delivery hai. Confirm kar dein?”</p>
+                <p><b>Customer:</b> “Size galat select ho gaya, mujhe M chahiye tha.”</p>
+                <p><b>Pooja:</b> “Main abhi M kar deti hoon.” <b>Customer:</b> “Haan, theek hai.”</p>
+              </div>
+              <dl class="facts">
+                <div><dt>Order</dt><dd>₹1,499, COD</dd></div>
+                <div><dt>Issue</dt><dd>Wrong size</dd></div>
+                <div><dt>Outcome</dt><dd>Confirmed, size M</dd></div>
+                <div><dt>RTO risk</dt><dd>Low now</dd></div>
+              </dl>
+              <div class="tags"><span class="tag tag-ok">Order saved</span><span class="tag">Mood: annoyed, then relieved</span></div>
+              <p class="next"><b>Next step:</b> change the order to size M before dispatch.</p>
+            </div>
+          </article>
+
+          <!-- Clinic -->
+          <article class="call" data-show="clinic">
+            <div class="call-bar"><span class="call-who">Front desk · Incoming · 1 min 48 s</span><span class="pill-ok">Analysed</span></div>
+            <div class="call-body">
+              <div class="quote">
+                <p><b>Caller:</b> “Knee pain ke liye doctor se milna hai. Sunday ko OPD hai?”</p>
+                <p><b>Front desk:</b> “Sunday band hai. Monday 10 baje ka slot hai.”</p>
+                <p><b>Caller:</b> “Monday nahi ho payega. Main baad mein call karti hoon.”</p>
+              </div>
+              <dl class="facts">
+                <div><dt>Reason</dt><dd>Knee pain</dd></div>
+                <div><dt>Department</dt><dd>Orthopaedics</dd></div>
+                <div><dt>Outcome</dt><dd>Not booked</dd></div>
+                <div><dt>Why</dt><dd>Wanted a weekend slot</dd></div>
+              </dl>
+              <div class="tags"><span class="tag tag-hot">Lost appointment</span><span class="tag">Mood: in pain, frustrated</span></div>
+              <p class="next"><b>Next step:</b> call back with the Saturday 5 pm slot.</p>
+            </div>
+          </article>
+          <p class="caption">Example call. Your fields, labels and next steps are set up for your business.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATEMENT -->
+    <section class="statement">
+      <div class="wrap narrow">
+        <p class="big reveal">Your team talks to customers all day.<br><span class="grad">Almost none of it is written down.</span></p>
+        <p class="sub reveal">You hear about a lost deal days later, if at all. Nobody has time to listen to hundreds of recordings. CallSense listens to every call for you and turns it into answers.</p>
+      </div>
+    </section>
+
+    <!-- WHAT YOU GET -->
+    <section class="section" id="what">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">What you get</p>
+          <h2>From recording to answers, automatically.</h2>
+          <p class="sec-lede">Every call your team makes or takes is picked up within minutes of hanging up. Nobody has to fill in a form.</p>
+        </div>
+        <div class="grid3">
+          <div class="card reveal"><h3>Every call written down</h3><p>Full transcripts in Hindi, English or Hinglish, with who said what. Search any call by name, number or word.</p></div>
+          <div class="card reveal"><h3>Mood and intent</h3><p>Is the customer keen, confused, angry or just browsing? Each call is labelled, with the reason, so you can sort leads by how hot they are.</p></div>
+          <div class="card reveal"><h3>Key details pulled out</h3><p>Budget, product, course, appointment, objection, next step: the fields you care about, filled in from the conversation.</p></div>
+          <div class="card reveal"><h3>A live dashboard</h3><p>Calls by agent, outcome and mood, lost reasons, follow-ups due today. Open it on your phone or laptop.</p></div>
+          <div class="card reveal"><h3>Ask ChatGPT or Claude</h3><p>“Kal kitne logon ne site visit ke liye haan bola?” Ask about your calls in plain Hindi or English and get the answer with the calls behind it.</p></div>
+          <div class="card reveal"><h3>Alerts and a weekly report</h3><p>A nudge when a hot lead isn't called back or a customer gets angry, and a short owner's report every Monday.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ASK -->
+    <section class="section alt" id="ask">
+      <div class="wrap split">
+        <div class="reveal">
+          <p class="eyebrow">Ask your calls anything</p>
+          <h2 class="h2">Questions you couldn't answer before.</h2>
+          <p class="sec-lede">Your calls become data that ChatGPT or Claude can read through a private, read-only connection. Ask in Hindi, English or a mix. Every answer points to the calls behind it, so you can listen and check.</p>
+          <ul class="ticks" style="margin-top:24px" data-show="realestate">
+            <li>Which project gets the most enquiries, and what stops people booking?</li>
+            <li>What budgets are people asking for in Hinjewadi this month?</li>
+            <li>Which agent's leads go cold after the first call?</li>
+          </ul>
+          <ul class="ticks" style="margin-top:24px" data-show="coaching">
+            <li>Which course do parents ask about most this month?</li>
+            <li>What fee objections come up, and which counsellor handles them best?</li>
+            <li>How many demo-class bookings turned into admissions?</li>
+          </ul>
+          <ul class="ticks" style="margin-top:24px" data-show="d2c">
+            <li>Which product gets the most complaints on calls this week?</li>
+            <li>Which pin codes refuse COD most often?</li>
+            <li>How many orders did each agent save from cancellation?</li>
+          </ul>
+          <ul class="ticks" style="margin-top:24px" data-show="clinic">
+            <li>Which doctor do callers ask for most, and when?</li>
+            <li>How many callers asked about fees or insurance and didn't book?</li>
+            <li>Which missed calls never got a call back?</li>
+          </ul>
+        </div>
+        <div class="chat reveal" aria-label="Example question and answer">
+          <div class="chat-bar">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="chat-title">ChatGPT</span>
+            <span class="pill-ok">Your calls connected</span>
+          </div>
+          <div class="chat-body" data-show="realestate">
+            <div class="msg msg-user">Is hafte kis kis ne site visit ke liye haan bola, aur kisko abhi tak confirmation call nahi gaya?</div>
+            <div class="msg msg-ai">
+              <p>9 people agreed to a site visit this week. 3 haven't had a confirmation call:</p>
+              <div class="tbl-wrap"><table class="tbl">
+                <thead><tr><th>Customer</th><th>Budget</th><th>Visit</th><th>Agent</th></tr></thead>
+                <tbody>
+                  <tr><td>Amit S.</td><td>₹85 L</td><td>Sat 11 am</td><td>Rahul</td></tr>
+                  <tr><td>Priya K.</td><td>₹1.2 Cr</td><td>Sat 4 pm</td><td>Sunil</td></tr>
+                  <tr><td>Vikas M.</td><td>₹70 L</td><td>Sun 12 pm</td><td>Rahul</td></tr>
+                </tbody>
+              </table></div>
+              <p>Priya asked twice about possession date, so a call from a senior person may help.</p>
+              <p class="meta-line">From 214 calls, Mon to Thu · tap a name to hear the call</p>
+            </div>
+          </div>
+          <div class="chat-body" data-show="coaching">
+            <div class="msg msg-user">Which parents asked about EMI this week and haven't been called back?</div>
+            <div class="msg msg-ai">
+              <p>14 parents asked about EMI or instalments this week. 5 haven't been called back:</p>
+              <div class="tbl-wrap"><table class="tbl">
+                <thead><tr><th>Parent</th><th>Course</th><th>Asked on</th><th>Counsellor</th></tr></thead>
+                <tbody>
+                  <tr><td>Mrs. Sharma</td><td>JEE 2-year</td><td>Mon</td><td>Neha</td></tr>
+                  <tr><td>Mr. Reddy</td><td>NEET 1-year</td><td>Tue</td><td>Arjun</td></tr>
+                  <tr><td>Mrs. Khan</td><td>Foundation</td><td>Tue</td><td>Neha</td></tr>
+                </tbody>
+              </table></div>
+              <p>2 more are listed in the dashboard. All 5 sounded keen and said fees were the only concern.</p>
+              <p class="meta-line">From 386 admission calls, Mon to Thu</p>
+            </div>
+          </div>
+          <div class="chat-body" data-show="d2c">
+            <div class="msg msg-user">Why did customers cancel COD orders this week?</div>
+            <div class="msg msg-ai">
+              <p>128 COD orders were cancelled on confirmation calls this week:</p>
+              <div class="tbl-wrap"><table class="tbl">
+                <thead><tr><th>Reason</th><th>Orders</th><th>Share</th></tr></thead>
+                <tbody>
+                  <tr><td>Wrong size ordered</td><td>41</td><td>32%</td></tr>
+                  <tr><td>Delivery too slow</td><td>28</td><td>22%</td></tr>
+                  <tr><td>Changed mind</td><td>24</td><td>19%</td></tr>
+                  <tr><td>Found it cheaper</td><td>18</td><td>14%</td></tr>
+                  <tr><td>Other</td><td>17</td><td>13%</td></tr>
+                </tbody>
+              </table></div>
+              <p>Most wrong-size cancels were on one kurta style. A size chart on that page could save about 30 orders a week.</p>
+              <p class="meta-line">From 1,940 confirmation calls, Mon to Sun</p>
+            </div>
+          </div>
+          <div class="chat-body" data-show="clinic">
+            <div class="msg msg-user">Last week how many callers wanted a weekend appointment and didn't book?</div>
+            <div class="msg msg-ai">
+              <p>37 callers asked for a Saturday or Sunday slot. 23 of them didn't book:</p>
+              <div class="tbl-wrap"><table class="tbl">
+                <thead><tr><th>Department</th><th>Asked</th><th>Didn't book</th></tr></thead>
+                <tbody>
+                  <tr><td>Orthopaedics</td><td>14</td><td>9</td></tr>
+                  <tr><td>Dermatology</td><td>11</td><td>7</td></tr>
+                  <tr><td>Paediatrics</td><td>8</td><td>4</td></tr>
+                  <tr><td>Other</td><td>4</td><td>3</td></tr>
+                </tbody>
+              </table></div>
+              <p>A Sunday morning orthopaedics OPD would likely fill: 9 people asked for it in one week.</p>
+              <p class="meta-line">From 612 calls, Mon to Sun</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how">
+      <div class="wrap">
+        <div class="sec-head center reveal">
+          <p class="eyebrow">How it works</p>
+          <h2>Your team keeps calling. We do the rest.</h2>
+        </div>
+        <ol class="steps">
+          <li class="card reveal"><span class="step-n">1</span><h3>Your team calls as usual</h3><p>Calls go through your business number on Superfone (or another calling system that records calls). Nothing new to learn.</p></li>
+          <li class="card reveal"><span class="step-n">2</span><h3>Each call is analysed</h3><p>When a call ends, the recording comes to us. Within minutes it is transcribed, and the mood, key details and next step are pulled out.</p></li>
+          <li class="card reveal"><span class="step-n">3</span><h3>You see it and ask it</h3><p>Open the dashboard, get alerts and the weekly report, or ask ChatGPT or Claude about any call, any agent, any week.</p></li>
+        </ol>
+        <p class="note reveal">Setup takes about a week. We do it with you on a call, and your team doesn't need to change anything.</p>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="section alt" id="industries">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Industries</p>
+          <h2>Built for businesses that sell on the phone.</h2>
+          <p class="sec-lede">If your team makes or takes more than 30 customer calls a day, there is money in those calls that nobody is counting.</p>
+        </div>
+        <div class="grid3">
+          <a class="card ind-card reveal" href="/real-estate"><h3>Real estate</h3><p>Builders, brokers and channel partners. Budget, BHK, location, loan need, site-visit booked, why they didn't book.</p><span class="link-arrow">For real estate</span></a>
+          <a class="card ind-card reveal" href="/coaching"><h3>Coaching &amp; edtech</h3><p>Admission and counselling calls. Course, exam, parent or student, fee objections, demo class booked, admission status.</p><span class="link-arrow">For coaching</span></a>
+          <a class="card ind-card reveal" href="/d2c"><h3>D2C brands</h3><p>COD confirmation, support and sales calls. Cancel reasons, RTO risk, product complaints, size issues, orders saved.</p><span class="link-arrow">For D2C brands</span></a>
+          <a class="card ind-card reveal" href="/clinics"><h3>Clinics &amp; hospitals</h3><p>Front-desk and appointment calls. Reason for calling, department, booked or not, fees and insurance questions.</p><span class="link-arrow">For clinics</span></a>
+          <div class="card reveal"><h3>Insurance &amp; loans</h3><p>Product asked about, eligibility details, documents pending, objections, and whether the right disclosures were said.</p></div>
+          <div class="card reveal"><h3>Car &amp; bike dealers, travel, B2B sales</h3><p>Model or package asked about, budget, test drive or booking, competitor mentioned, follow-up due.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOM -->
+    <section class="section" id="custom">
+      <div class="wrap split">
+        <div class="reveal">
+          <p class="eyebrow">Made for your business</p>
+          <h2 class="h2">Your fields. Your labels. Your language.</h2>
+          <p class="sec-lede">No two businesses ask the same questions on a call. Before we switch anything on, we sit with you and set CallSense up around how your team actually sells.</p>
+        </div>
+        <ul class="ticks lg reveal">
+          <li>The details you want from each call, such as budget, course or order number</li>
+          <li>Your own mood and lead labels: hot, warm, cold, angry, ready to pay</li>
+          <li>A checklist to score each call: greeting, needs asked, price explained, next step fixed</li>
+          <li>The objections and competitor names to watch for</li>
+          <li>Alerts on what matters to you, sent to the right person</li>
+          <li>Your dashboard, weekly report and the languages your customers speak</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section alt" id="pricing">
+      <div class="wrap">
+        <div class="sec-head center reveal">
+          <p class="eyebrow">Pricing</p>
+          <h2>Less than one tele-caller's salary.</h2>
+          <p class="sec-lede">One extra booking or admission a month usually pays for the whole year. Start with a 2-week free trial on your own calls.</p>
+        </div>
+        <div class="grid3 prices">
+          <div class="card price reveal">
+            <h3>Starter</h3>
+            <p class="amount">₹5,999<span>/month</span></p>
+            <ul class="ticks"><li>1 to 3 callers</li><li>1,500 call minutes a month</li><li>Dashboard, alerts and ChatGPT access</li></ul>
+          </div>
+          <div class="card price featured reveal">
+            <p class="badge">Most teams</p>
+            <h3>Team</h3>
+            <p class="amount">₹11,999<span>/month</span></p>
+            <ul class="ticks"><li>4 to 10 callers</li><li>5,000 call minutes a month</li><li>Agent scorecards and lost-reason reports</li></ul>
+          </div>
+          <div class="card price reveal">
+            <h3>Pro</h3>
+            <p class="amount">₹19,999<span>/month</span></p>
+            <ul class="ticks"><li>10 or more callers</li><li>12,000 call minutes a month</li><li>Weekly owner report and priority support</li></ul>
+          </div>
+        </div>
+        <p class="note reveal">One-time setup from ₹15,000, charged only if you continue after the trial. Extra minutes ₹1.50 each. Prices are plus 18% GST. No long contract: stop any month.</p>
+      </div>
+    </section>
+
+    <!-- SECURITY -->
+    <section class="section dark" id="security">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Privacy and trust</p>
+          <h2>Your calls stay yours.</h2>
+          <p class="sec-lede on-dark">Customer conversations are sensitive. We handle them that way.</p>
+        </div>
+        <div class="grid2">
+          <div class="feat reveal"><h3>Private to your business</h3><p>Your calls are kept in a database of their own, sent over encrypted connections, and seen only by the people you approve.</p></div>
+          <div class="feat reveal"><h3>Never sold, never used for training</h3><p>We don't sell or share your data, and we don't use your calls to train AI models. AI tools only read the figures needed to answer your question.</p></div>
+          <div class="feat reveal"><h3>Delete any time</h3><p>Ask us to delete a call, a customer or everything, and it's done. If you leave, you can take an export of your data with you.</p></div>
+          <div class="feat reveal"><h3>Recording notice made easy</h3><p>We help you add a short “this call may be recorded” message in Hindi and English, and we follow India's DPDP Act when handling customer data for you.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap narrow">
+        <div class="sec-head reveal"><p class="eyebrow">FAQ</p><h2>Questions owners ask.</h2></div>
+        <div class="faq">
+          <details><summary>Which languages does it understand?</summary><p>Hindi, English and Hinglish work best. We also handle Marathi, Gujarati, Bengali, Tamil, Telugu, Kannada, Malayalam and Punjabi. We test your languages on your own calls during the free trial, before you pay anything.</p></details>
+          <details><summary>Which phone systems does it work with?</summary><p>Superfone works today, with no change for your team. Other business calling systems that save recordings, such as Exotel, MyOperator, Knowlarity and Ozonetel, can usually be connected. Tell us yours in the form and we'll confirm. If your team calls from personal mobiles, we'll suggest a simple business calling app.</p></details>
+          <details><summary>Superfone already gives me call summaries. What's different?</summary><p>A summary describes one call. CallSense fills in the same fields from every call, so you see totals and trends across all of them: how many hot leads this week, the top reasons people didn't buy, which agent converts best. You also get alerts and can ask questions across months of calls.</p></details>
+          <details><summary>How accurate is it?</summary><p>On clear calls, transcripts are very close to what was said. Noisy lines and heavy accents can cause mistakes in individual words, but the key details and mood usually come through. Every insight links back to the call and its transcript, so you can listen and check.</p></details>
+          <details><summary>Do I need a ChatGPT subscription?</summary><p>No, the dashboard, alerts and reports work on their own. To ask questions inside ChatGPT or Claude, you need a plan that allows custom connectors, such as ChatGPT Plus or Business, or Claude Pro or Team.</p></details>
+          <details><summary>Will my team feel watched?</summary><p>Most teams find it helpful once they see it: no more call notes to fill, and the best calls become examples for training. We suggest you tell your team it's for coaching and follow-ups, not punishment.</p></details>
+          <details><summary>Is it legal to record customer calls?</summary><p>Businesses in India commonly record calls for quality and training. The usual good practice is to let callers know with a short message at the start of the call, and we'll help you set one up. If you're unsure about your case, check with your lawyer.</p></details>
+          <details><summary>How long does setup take?</summary><p>About a week. We agree on the fields and labels with you on a call, connect your calling system, and check the first few days of calls with you before you rely on it.</p></details>
+          <details><summary>What happens to my data if I stop?</summary><p>You can take an export of your calls and data, and we delete everything from our systems when you ask.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRIAL FORM -->
+    <section class="section alt" id="trial">
+      <div class="wrap form-wrap">
+        <div class="sec-head center reveal">
+          <p class="eyebrow">2-week free trial</p>
+          <h2>See what your calls are telling you.</h2>
+          <p class="sec-lede">Tell us a little about your business. We'll call you within one working day to set up the trial on your own calls.</p>
+        </div>
+
+        <form class="form card" id="lead-form" novalidate>
+          <div class="row2">
+            <label class="field"><span>Your name</span><input name="full_name" autocomplete="name" required><small class="err" data-for="full_name"></small></label>
+            <label class="field"><span>Mobile number <em>(WhatsApp preferred)</em></span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="98xxxxxxxx" required><small class="err" data-for="phone"></small></label>
+          </div>
+          <div class="row2">
+            <label class="field"><span>Business name</span><input name="company" autocomplete="organization" required><small class="err" data-for="company"></small></label>
+            <label class="field"><span>City</span><input name="city" autocomplete="address-level2" placeholder="e.g. Pune"></label>
+          </div>
+          <label class="field"><span>Email <em>(optional)</em></span><input name="email" type="email" autocomplete="email"><small class="err" data-for="email"></small></label>
+
+          <fieldset class="field">
+            <legend>Your business</legend>
+            <div class="seg">
+              <label><input type="radio" name="industry" value="real_estate"><span>Real estate</span></label>
+              <label><input type="radio" name="industry" value="coaching"><span>Coaching / edtech</span></label>
+              <label><input type="radio" name="industry" value="d2c"><span>D2C brand</span></label>
+              <label><input type="radio" name="industry" value="clinic"><span>Clinic / hospital</span></label>
+              <label><input type="radio" name="industry" value="insurance_loans"><span>Insurance / loans</span></label>
+              <label><input type="radio" name="industry" value="automobile"><span>Car / bike dealer</span></label>
+              <label><input type="radio" name="industry" value="travel"><span>Travel</span></label>
+              <label><input type="radio" name="industry" value="b2b_sales"><span>B2B sales</span></label>
+              <label><input type="radio" name="industry" value="other"><span>Other</span></label>
+            </div>
+            <small class="err" data-for="industry"></small>
+          </fieldset>
+
+          <div class="row2">
+            <label class="field"><span>People on calls</span>
+              <select name="team_size"><option value="">Choose</option><option value="1_3">1 to 3</option><option value="4_10">4 to 10</option><option value="11_25">11 to 25</option><option value="26_plus">26 or more</option></select>
+            </label>
+            <label class="field"><span>Calls a day (whole team)</span>
+              <select name="calls_per_day"><option value="">Choose</option><option value="under_50">Under 50</option><option value="50_200">50 to 200</option><option value="200_500">200 to 500</option><option value="500_plus">500 or more</option></select>
+            </label>
+          </div>
+          <label class="field"><span>Calling system</span>
+            <select name="phone_system"><option value="">Choose</option><option value="superfone">Superfone</option><option value="exotel">Exotel</option><option value="myoperator">MyOperator</option><option value="knowlarity">Knowlarity</option><option value="ozonetel">Ozonetel</option><option value="mobile_sim">Personal mobiles / SIM</option><option value="other">Other</option><option value="not_sure">Not sure</option></select>
+          </label>
+
+          <fieldset class="field">
+            <legend>Languages your customers speak <em>(pick all)</em></legend>
+            <div class="checks">
+              <label><input type="checkbox" name="languages" value="hindi"><span>Hindi</span></label>
+              <label><input type="checkbox" name="languages" value="english"><span>English</span></label>
+              <label><input type="checkbox" name="languages" value="hinglish"><span>Hinglish</span></label>
+              <label><input type="checkbox" name="languages" value="marathi"><span>Marathi</span></label>
+              <label><input type="checkbox" name="languages" value="gujarati"><span>Gujarati</span></label>
+              <label><input type="checkbox" name="languages" value="bengali"><span>Bengali</span></label>
+              <label><input type="checkbox" name="languages" value="tamil"><span>Tamil</span></label>
+              <label><input type="checkbox" name="languages" value="telugu"><span>Telugu</span></label>
+              <label><input type="checkbox" name="languages" value="kannada"><span>Kannada</span></label>
+              <label><input type="checkbox" name="languages" value="malayalam"><span>Malayalam</span></label>
+              <label><input type="checkbox" name="languages" value="punjabi"><span>Punjabi</span></label>
+              <label><input type="checkbox" name="languages" value="other"><span>Other</span></label>
+            </div>
+          </fieldset>
+
+          <label class="field"><span>What would you most like to know from your calls? <em>(optional)</em></span><textarea name="message" rows="3" placeholder="e.g. Why do site-visit leads go cold after the first call?"></textarea></label>
+
+          <label class="hp" aria-hidden="true">Leave this empty<input name="company_site" tabindex="-1" autocomplete="off"></label>
+          <p class="form-status" role="alert"></p>
+          <button class="btn btn-block" type="submit">Start my free trial</button>
+          <p class="form-note">No payment needed for the trial. We use your details only to contact you about CallSense. <a href="/privacy">Privacy</a></p>
+        </form>
+
+        <div class="card done" id="lead-done" tabindex="-1" hidden>
+          <div class="done-icon" aria-hidden="true">✓</div>
+          <h3>Thank you. Request received.</h3>
+          <p>We'll call or WhatsApp you within one working day to set up your trial.</p>
+          <p class="fine">In a hurry? Email <a href="mailto:himanshu@callsense.in">himanshu@callsense.in</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap foot">
+      <a class="brand" href="/" aria-label="CallSense home"><img class="brand-mark" src="/logo.svg" alt="" width="28" height="28"><span>CallSense</span></a>
+      <p>Every customer call, understood. Made in India.<br>Contact: <a href="mailto:himanshu@callsense.in">himanshu@callsense.in</a></p>
+      <p class="foot-links"><a href="/real-estate">Real estate</a><a href="/coaching">Coaching</a><a href="/d2c">D2C brands</a><a href="/clinics">Clinics</a><a href="/guides/">Guides</a><a href="/privacy">Privacy</a></p>
+    </div>
+  </footer>
+
+  <script src="/industry.js?v=1" defer></script>
+  <script src="/app.js?v=1" defer></script>
+</body>
+</html>

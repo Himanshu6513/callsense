@@ -1,0 +1,57 @@
+# CallSense
+
+> CallSense is call intelligence for Indian businesses. It transcribes a business's sales and support calls in Hindi, English or Hinglish, picks up each customer's mood and intent and the key details, puts them in a live dashboard, and lets owners ask ChatGPT or Claude questions about their calls. It is set up and customised for each business, and serves businesses across India.
+
+## What we deliver
+
+- Every call transcribed automatically after it ends, from the business's calling system (Superfone today; other systems that save recordings, such as Exotel, MyOperator, Knowlarity and Ozonetel, on request).
+- Mood and intent labels for each call (for example keen, unsure, angry, just browsing), with the reason.
+- Key details pulled out of every call into the same fields, chosen with the business: budget, product or course, appointment, order, objection, next step.
+- A live dashboard: calls by agent, outcomes, lost reasons, follow-ups due.
+- Alerts (for example a hot lead not called back in 24 hours) and a weekly owner report.
+- A private, read-only connection so owners can ask ChatGPT or Claude about their calls in Hindi or English.
+- Customisation: fields, mood and lead labels, call-scoring checklist, objections and competitors to watch, alerts, languages.
+
+## Languages
+
+Hindi, English and Hinglish work best. Marathi, Gujarati, Bengali, Tamil, Telugu, Kannada, Malayalam and Punjabi are supported and tested on the business's own calls during the free trial.
+
+## Who it is for
+
+- Real estate builders, brokers and channel partners: budget, BHK, location, loan need, site visit booked, why not.
+- Coaching institutes and edtech admission teams: course, exam, class, fee objections, demo booked.
+- D2C brands with COD confirmation and support calls: cancel reasons, RTO risk, product complaints, orders saved.
+- Clinics and hospitals: reason for calling, department, booked or not, fee and insurance questions.
+- Also insurance and loan agents, car and bike dealers, travel agencies and B2B sales teams.
+
+## Pricing (INR, plus 18% GST)
+
+- Starter: ₹5,999 a month, 1 to 3 callers, 1,500 call minutes.
+- Team: ₹11,999 a month, 4 to 10 callers, 5,000 call minutes.
+- Pro: ₹19,999 a month, 10 or more callers, 12,000 call minutes, weekly owner report.
+- Extra minutes ₹1.50 each. One-time setup from ₹15,000, charged only if the business continues after a 2-week free trial.
+
+## Privacy
+
+Each business's calls are kept in their own private database, sent over encrypted connections, seen only by people the business approves, never sold and never used to train AI models, and deleted on request. Handled in line with India's Digital Personal Data Protection Act, 2023.
+
+## Key pages
+
+- [Home](https://callsense.in/)
+- [For real estate](https://callsense.in/real-estate)
+- [For coaching institutes](https://callsense.in/coaching)
+- [For D2C brands](https://callsense.in/d2c)
+- [For clinics and hospitals](https://callsense.in/clinics)
+- [Privacy note](https://callsense.in/privacy)
+
+## Guides
+
+- [How to analyse sales call recordings in Hindi and Hinglish](https://callsense.in/guides/analyse-sales-call-recordings-in-hindi)
+- [Superfone call recordings: how to get insights and ask ChatGPT](https://callsense.in/guides/superfone-call-recording-analysis)
+- [Real estate sales calls: what to track to get more site visits](https://callsense.in/guides/real-estate-sales-call-tracking)
+- [What is call intelligence? A plain guide for Indian businesses](https://callsense.in/guides/what-is-call-intelligence)
+
+## Contact
+
+- Free trial: https://callsense.in/#trial
+- Email: himanshu@callsense.in
