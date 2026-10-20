@@ -69,7 +69,7 @@ const guides = [
     slug: "analyse-sales-call-recordings-in-hindi",
     title: "How to Analyse Sales Call Recordings in Hindi and Hinglish",
     short: "Analyse call recordings in Hindi",
-    description: "A practical way for Indian businesses to turn Hindi, Hinglish and English call recordings into transcripts, lead details, mood and reports, without listening to every call.",
+    description: "How Indian businesses turn Hindi, Hinglish and English call recordings into transcripts, lead details, mood and reports, without listening to every call.",
     answer: "To analyse sales calls in Hindi or Hinglish, first collect the recordings from your calling system, transcribe them with a speech model that handles code-mixed Hindi and English, then pull the same fields out of every transcript (such as budget, product, objection and next step) and store them in a table. Once every call is a row, you can count, filter, chart and ask questions across all of them.",
     sections: [
       ["Why listening to recordings doesn't work", `<p>A team of five making 60 calls a day each produces about 300 calls a day. Nobody can listen to that. Owners end up sampling a few calls, or relying on what the team writes in the CRM, which is usually short and often missing.</p>`],
@@ -87,9 +87,9 @@ const guides = [
   },
   {
     slug: "superfone-call-recording-analysis",
-    title: "Superfone Call Recordings: How to Get Insights and Ask ChatGPT",
+    title: "Superfone Call Recordings: Get Insights and Ask ChatGPT",
     short: "Superfone call recording analysis",
-    description: "How to take Superfone call recordings beyond single-call summaries: lead fields across every call, agent reports, alerts, and asking ChatGPT about your calls.",
+    description: "Take Superfone call recordings beyond single-call summaries: lead fields across every call, agent reports, alerts, and asking ChatGPT about your calls.",
     answer: "Superfone records business calls and can send each recording to another system through its webhooks as soon as it is ready. Sending those recordings to a call-analysis service lets you transcribe them, fill in the same lead fields from every call, see totals and trends in a dashboard, get alerts, and ask ChatGPT or Claude questions across all your calls.",
     sections: [
       ["What Superfone gives you already", `<p>Superfone gives a business number that several team members can use, records calls, and offers AI summaries of individual calls. It can also notify other systems through webhooks set up in its Automations section, including when a call recording is available and when a call summary is ready.</p>`],
@@ -105,7 +105,7 @@ const guides = [
   },
   {
     slug: "real-estate-sales-call-tracking",
-    title: "Real Estate Sales Calls: What to Track to Get More Site Visits",
+    title: "Real Estate Sales Calls: What to Track for More Site Visits",
     short: "Real estate call tracking",
     description: "The details builders and brokers in India should capture from every enquiry call, and how to use them to book more site visits and stop losing hot leads.",
     answer: "For real estate enquiry calls, track the buyer's budget, configuration (such as 2 or 3 BHK), preferred location, timeline, whether they need a home loan, whether a site visit was booked, and the reason if it wasn't. Add a lead temperature and a next step with a date. Captured from every call, these show which leads to chase today, why visits don't happen, and which agents convert.",
@@ -123,9 +123,9 @@ const guides = [
   },
   {
     slug: "what-is-call-intelligence",
-    title: "What Is Call Intelligence? A Plain Guide for Indian Businesses",
+    title: "What Is Call Intelligence? A Guide for Indian Businesses",
     short: "What is call intelligence",
-    description: "Call intelligence (also called conversation intelligence) explained simply: what it does with your sales and support calls, what it costs, and who in India it suits.",
+    description: "Call intelligence (conversation intelligence) explained simply: what it does with your sales and support calls, what it costs, and who in India it suits.",
     answer: "Call intelligence is software that listens to recorded business calls and turns them into data: a transcript, the customer's mood and intent, key details like budget or product, the outcome and the next step. Owners and managers use it to see why customers buy or don't, coach their team and follow up on every lead, without listening to recordings.",
     sections: [
       ["What it does, step by step", `<ol><li><strong>Records</strong> calls through your business calling system.</li><li><strong>Transcribes</strong> them, including Hindi and Hinglish.</li><li><strong>Understands</strong> each call: mood, intent, key details, objections, next step.</li><li><strong>Reports</strong> it in a dashboard, alerts and weekly summaries.</li><li><strong>Answers questions</strong> about your calls, increasingly through ChatGPT or Claude.</li></ol>`],

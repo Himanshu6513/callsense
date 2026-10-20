@@ -234,23 +234,23 @@ const INDUSTRY_PAGES = {
     key: "realestate",
     title: "Call Recording Analysis for Real Estate in India | CallSense",
     description:
-      "Every enquiry call transcribed in Hindi or English, with budget, BHK, location and site-visit status pulled out. Dashboard plus ChatGPT for builders and brokers.",
+      "Builders and brokers: see which hot leads your team never called back. Every call checked in Hindi or English, with budget, BHK and site-visit status.",
   },
   coaching: {
     key: "coaching",
-    title: "Counselling Call Analysis for Coaching Institutes | CallSense",
+    title: "Admission Call Analysis for Coaching Institutes | CallSense",
     description:
       "Every admission call transcribed, with course, exam, fee objections and demo bookings pulled out. Know which parents to call back. Hindi and English.",
   },
   d2c: {
     key: "d2c",
-    title: "COD Confirmation & Support Call Analysis for D2C | CallSense",
+    title: "COD and NDR Call Analysis for D2C Brands | CallSense",
     description:
       "Know why customers cancel COD orders, what they complain about and which agents save the most orders. Every call transcribed in Hindi or English.",
   },
   clinics: {
     key: "clinic",
-    title: "Patient Call Analysis for Clinics & Hospitals | CallSense",
+    title: "Appointment Call Analysis for Clinics | CallSense",
     description:
       "See which callers asked for appointments and didn't book, what treatments people ask about and how your front desk handles calls. Hindi and English.",
   },
