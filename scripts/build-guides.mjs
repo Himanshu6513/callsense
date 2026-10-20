@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = path.join(ROOT, "public", "guides");
 const SITE = "https://callsense.in";
-const PUBLISHED = "2026-10-20";
+const PUBLISHED = "2026-10-21";
 const CSS = "/styles.css?v=1";
 
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -67,10 +67,30 @@ const ORG = { "@type": "Organization", name: "CallSense", url: `${SITE}/`, logo:
 
 const guides = [
   {
+    slug: "find-leads-your-team-never-called-back",
+    title: "How to Find Leads Your Sales Team Never Called Back",
+    short: "Find leads never called back",
+    description: "A simple way to find every lead your team never called, or called too late, by matching your lead list against call recordings, and what to do next.",
+    answer: "Match your lead list against your call records. Any lead with no outgoing call, or a first call more than a day after the enquiry, is a missed lead. AI call analysis goes further: it reads every recorded call to find leads who were interested but never got the follow-up they were promised, and tells you why others didn't buy.",
+    sections: [
+      ["Why missed leads are the most expensive problem in sales", `<p>Most businesses pay for leads through ads, portals or referrals. When a lead is not called back quickly, the money spent on it is wasted, and the customer often buys from whoever called first. Owners rarely see this, because nobody records a call that never happened.</p>`],
+      ["Step 1: Put your leads and calls side by side", `<p>Export your leads from wherever they arrive: portals, ads, your website, WhatsApp or a spreadsheet. Export your call log from your calling system. Match them by phone number. Every lead with no call is a missed lead.</p>`],
+      ["Step 2: Check how fast each lead was called", `<p>For each lead that was called, compare the time of the enquiry with the time of the first call. Leads first called after a day convert far less often than leads called within the hour. Flag the slow ones.</p>`],
+      ["Step 3: Find the leads that went quiet after the first call", `<p>This is where most money is lost, and it needs the calls themselves. A lead who said “send me the quote” or “call me on Friday” and never heard back looks fine in a call log. Reading the transcript shows the promise that was not kept.</p>`],
+      ["Step 4: Learn why the rest didn't buy", `<p>Group every lost lead by the reason given on the call: price, timing, a competitor, missing information. The top two reasons usually point to one fix in your offer or your sales script.</p>`],
+      ["How AI does this automatically", `<p>AI call analysis transcribes every call in any language, matches it to your lead list, and sends a morning list of who to call back today, with the reason. It also shows which person on your team converts best, so the rest can learn from them.</p>`],
+    ],
+    faq: [
+      ["What counts as a missed lead?", "A lead with no call at all, a first call more than a day late, or a lead who was promised a follow-up that never happened."],
+      ["Can I find missed leads without call recordings?", "Partly. Matching your lead list with your call log finds leads with no call. Finding broken promises and reasons for not buying needs the recordings."],
+      ["How quickly should a new lead be called?", "As fast as possible, ideally within minutes. Interest drops quickly, and many buyers enquire with several businesses at once."],
+    ],
+  },
+  {
     slug: "analyse-sales-call-recordings-in-hindi",
     title: "How to Analyse Sales Calls in Hindi and Other Languages",
     short: "Analyse sales calls in any language",
-    description: "How businesses turn call recordings in Hindi, English or any other language into transcripts, lead details, mood and reports, without listening to every call.",
+    description: "How to turn call recordings in Hindi, English or any language into transcripts, lead details, mood and reports, without listening to every call.",
     answer: "To analyse sales calls in Hindi or any other language, first collect the recordings from your calling system, transcribe them with a speech model that handles your customers' languages, including calls that mix two languages, then pull the same fields out of every transcript (such as budget, product, objection and next step) and store them in a table. Once every call is a row, you can count, filter, chart and ask questions across all of them.",
     sections: [
       ["Why listening to recordings doesn't work", `<p>A team of five making 60 calls a day each produces about 300 calls a day. Nobody can listen to that. Owners end up sampling a few calls, or relying on what the team writes in the CRM, which is usually short and often missing.</p>`],
@@ -165,7 +185,7 @@ ${g.sections.map(([h, html]) => `      <h2>${esc(h)}</h2>\n      ${html}`).join(
       <h2>Frequently asked questions</h2>
 ${g.faq.map(([q, a]) => `      <h3>${esc(q)}</h3>\n      <p>${esc(a)}</p>`).join("\n")}
       <div class="cta-box">
-        <p><strong>Want this for your own calls?</strong> CallSense transcribes your team's calls in 50+ languages, pulls out mood and key details into a live dashboard, and lets you ask ChatGPT about them.</p>
+        <p><strong>Want to see your own missed leads?</strong> CallSense checks your team's calls in 50+ languages, pulls out mood and key details into a live dashboard, and lets you ask ChatGPT about them.</p>
         <p><a class="btn" href="/#demo">Get a missed-lead report</a> <a class="link-arrow" href="/#how">How it works</a></p>
       </div>
     </article>`;

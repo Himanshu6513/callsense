@@ -52,6 +52,7 @@ Each business's calls are kept in their own private database, sent over encrypte
 
 ## Guides
 
+- [How to find leads your sales team never called back](https://callsense.in/guides/find-leads-your-team-never-called-back)
 - [How to analyse sales calls in Hindi and other languages](https://callsense.in/guides/analyse-sales-call-recordings-in-hindi)
 - [Superfone call recordings: how to get insights and ask ChatGPT](https://callsense.in/guides/superfone-call-recording-analysis)
 - [Real estate sales calls: what to track to get more site visits](https://callsense.in/guides/real-estate-sales-call-tracking)
