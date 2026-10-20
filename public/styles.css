@@ -131,6 +131,7 @@ html[data-ind="d2c"] .aud-seg button[data-ind="d2c"],
 html[data-ind="clinic"] .aud-seg button[data-ind="clinic"] { background: var(--ink); color: var(--bg); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18); }
 
 /* industry versions: show only what matches <html data-ind> */
+html[data-ind="general"] [data-show]:not([data-show~="general"]),
 html[data-ind="realestate"] [data-show]:not([data-show~="realestate"]),
 html[data-ind="coaching"] [data-show]:not([data-show~="coaching"]),
 html[data-ind="d2c"] [data-show]:not([data-show~="d2c"]),

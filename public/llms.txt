@@ -1,6 +1,6 @@
 # CallSense
 
-> CallSense is call intelligence for Indian businesses. It transcribes a business's sales and support calls in Hindi, English or Hinglish, picks up each customer's mood and intent and the key details, puts them in a live dashboard, and lets owners ask ChatGPT or Claude questions about their calls. It is set up and customised for each business, and serves businesses across India.
+> CallSense is call intelligence for Indian businesses. It transcribes a business's sales and support calls in any language (including Hindi and Hinglish), picks up each customer's mood and intent and the key details, puts them in a live dashboard, and lets owners ask ChatGPT or Claude questions about their calls. It is set up and customised for each business, and serves businesses across India.
 
 ## What we deliver
 

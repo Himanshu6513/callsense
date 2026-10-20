@@ -234,25 +234,25 @@ const INDUSTRY_PAGES = {
     key: "realestate",
     title: "Call Recording Analysis for Real Estate in India | CallSense",
     description:
-      "Builders and brokers: see which hot leads your team never called back. Every call checked in Hindi or English, with budget, BHK and site-visit status.",
+      "Builders and brokers: see which hot leads your team never called back. Every call checked, with budget, BHK and site-visit status pulled out.",
   },
   coaching: {
     key: "coaching",
     title: "Admission Call Analysis for Coaching Institutes | CallSense",
     description:
-      "Every admission call transcribed, with course, exam, fee objections and demo bookings pulled out. Know which parents to call back. Hindi and English.",
+      "Every admission call transcribed, with course, exam, fee objections and demo bookings pulled out. Know which parents to call back, every morning.",
   },
   d2c: {
     key: "d2c",
     title: "COD and NDR Call Analysis for D2C Brands | CallSense",
     description:
-      "Know why customers cancel COD orders, what they complain about and which agents save the most orders. Every call transcribed in Hindi or English.",
+      "Know why customers cancel COD orders, what they complain about and which agents save the most orders. Every call checked, every day.",
   },
   clinics: {
     key: "clinic",
     title: "Appointment Call Analysis for Clinics | CallSense",
     description:
-      "See which callers asked for appointments and didn't book, what treatments people ask about and how your front desk handles calls. Hindi and English.",
+      "See which callers asked for appointments and didn't book, what treatments people ask about and how your front desk handles calls, every day.",
   },
 };
 const escAttr = (s) => s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
@@ -262,7 +262,7 @@ function industryPage(slug) {
   const a = INDUSTRY_PAGES[slug];
   const url = `https://${CANONICAL_HOST}/${slug}`;
   const html = fs.readFileSync(path.join(PUBLIC_DIR, "index.html"), "utf8")
-    .replace('<html lang="en-IN" data-ind="realestate">', `<html lang="en-IN" data-ind="${a.key}" data-ind-from="page">`)
+    .replace('<html lang="en-IN" data-ind="general">', `<html lang="en-IN" data-ind="${a.key}" data-ind-from="page">`)
     .replace(/<title>[^<]*<\/title>/, `<title>${escAttr(a.title)}</title>`)
     .replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${escAttr(a.description)}">`)
     .replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${url}">`)
