@@ -287,6 +287,43 @@ html[data-ind="clinic"] [data-show]:not([data-show~="clinic"]) { display: none !
 .featured { border: 2px solid var(--accent); }
 .badge { position: absolute; top: -13px; left: 24px; background: var(--accent); color: #fff !important; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 999px; }
 
+
+/* ---------- sample report (hero) ---------- */
+.report-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px 16px 16px; display: grid; gap: 10px; }
+.rc-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.rc-title { font-family: var(--font-display); font-weight: 700; font-size: 19px; letter-spacing: -0.02em; }
+.rc-tag { font-size: 12px; font-weight: 600; color: var(--ink-3); border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; }
+.rc-range { font-size: 13px; color: var(--ink-3); margin-top: -4px; }
+.kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.kpis div { background: var(--bg-alt); border-radius: 12px; padding: 10px; display: grid; gap: 2px; min-width: 0; }
+.kpis b { font-family: var(--font-display); font-size: 24px; letter-spacing: -0.02em; line-height: 1.1; }
+.kpis span { font-size: 12px; color: var(--ink-2); line-height: 1.25; }
+.kpis .bad b { color: var(--neg); }
+.rc-sub { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-3); margin-top: 4px; }
+.bars { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.bars li { display: grid; grid-template-columns: minmax(0, 9.5em) 1fr 2.8em; align-items: center; gap: 8px; font-size: 13px; }
+.bars span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bars i { display: block; height: 8px; border-radius: 4px; background: linear-gradient(90deg, #0a9d8f, var(--accent)); width: 0; justify-self: start; transition: width .6s ease; }
+.bars b { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+.rc-best { font-size: 14px; border-top: 1px solid var(--line); padding-top: 10px; }
+
+/* ---------- missed-leads calculator ---------- */
+.calc { display: grid; gap: 16px; padding: 24px 20px; box-shadow: var(--shadow); }
+.money { display: flex; gap: 8px; }
+.money select { width: 76px; flex: none; }
+.calc-out { display: grid; gap: 4px; text-align: center; padding: 18px; border-radius: var(--radius-sm); background: var(--bg-alt); font-size: 17px; color: var(--ink-2); }
+.calc-out > b { font-family: var(--font-display); font-size: clamp(32px, 7vw, 44px); color: var(--neg); letter-spacing: -0.03em; }
+.calc-out span { font-size: 15px; }
+.calc-out span b { color: var(--ink); }
+@media (min-width: 760px) { .calc { grid-template-columns: repeat(3, 1fr); padding: 32px; } .calc-out { grid-column: 1 / -1; } }
+
+/* how it works, compact */
+.gap-top { margin-top: 24px; }
+.mini-steps { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 10px; }
+.mini-steps li { display: flex; align-items: center; gap: 12px; font-weight: 600; }
+.mini-steps b { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: #fff; font-size: 14px; flex: none; }
+.cta-row + .fine { margin-top: 12px; }
+
 /* ---------- statement ---------- */
 .statement { padding: 72px 0; background: var(--bg-alt); text-align: center; }
 .statement .big { font-family: var(--font-display); font-size: clamp(28px, 6.4vw, 48px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.12; }

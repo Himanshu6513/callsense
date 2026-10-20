@@ -236,27 +236,27 @@ app.post("/api/leads", express.json({ limit: "20kb" }), async (req, res) => {
 const INDUSTRY_PAGES = {
   "real-estate": {
     key: "realestate",
-    title: "Call Recording Analysis for Real Estate in India | CallSense",
+    title: "Real Estate Leads Your Team Never Called Back | CallSense",
     description:
-      "Builders and brokers: see which hot leads your team never called back. Every call checked, with budget, BHK and site-visit status pulled out.",
+      "AI checks every call to find site-visit leads nobody called back, why buyers said no, and which agent books the most visits. 50+ languages.",
   },
   coaching: {
     key: "coaching",
-    title: "Admission Call Analysis for Coaching Institutes | CallSense",
+    title: "Missed Admission Calls for Coaching Institutes | CallSense",
     description:
-      "Every admission call transcribed, with course, exam, fee objections and demo bookings pulled out. Know which parents to call back, every morning.",
+      "AI checks every counselling call to find interested parents never called back, why they didn't join, and which counsellor converts best.",
   },
   d2c: {
     key: "d2c",
-    title: "COD and NDR Call Analysis for D2C Brands | CallSense",
+    title: "Why COD Orders Get Cancelled or Refused | CallSense",
     description:
-      "Know why customers cancel COD orders, what they complain about and which agents save the most orders. Every call checked, every day.",
+      "AI checks every confirmation and delivery call to show why COD orders fail, by product, courier and PIN code, and how to save them.",
   },
   clinics: {
     key: "clinic",
-    title: "Appointment Call Analysis for Clinics | CallSense",
+    title: "Missed Appointment Calls for Clinics | CallSense",
     description:
-      "See which callers asked for appointments and didn't book, what treatments people ask about and how your front desk handles calls, every day.",
+      "AI checks every front-desk call to find callers who never booked, why, and how each branch performs. Patient calls stay confidential.",
   },
 };
 const escAttr = (s) => s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
