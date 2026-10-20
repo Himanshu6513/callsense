@@ -249,6 +249,13 @@ html[data-ind="clinic"] [data-show]:not([data-show~="clinic"]) { display: none !
 .h2 { font-size: clamp(34px, 8vw, 56px); }
 .split .sec-lede { margin-bottom: 0; }
 
+/* four short cards: 2 across on phones, 4 on desktop */
+.grid4 { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+.grid4 .card { padding: 20px 16px; }
+.grid4 .card h3 { font-size: 18px; margin-bottom: 6px; }
+.grid4 .card p { font-size: 15px; }
+@media (min-width: 1000px) { .grid4 { grid-template-columns: repeat(4, 1fr); gap: 16px; } .grid4 .card { padding: 28px 22px; } }
+
 /* missed-lead report CTA */
 .report-box { margin-top: 26px; padding: 18px 18px 6px; border-radius: var(--radius-sm); background: var(--bg-alt); border: 1px solid var(--line); }
 .report-title { font-family: var(--font-display); font-size: 21px; font-weight: 700; letter-spacing: -0.02em; }
