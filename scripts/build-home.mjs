@@ -36,35 +36,35 @@ const IND = [
 // ---------- sample report per version ----------
 const REPORTS = {
   general: {
-    title: "Missed-lead report", calls: "1,240", kpis: [["86", "hot leads"], ["23", "never called back", "bad"], ["9", "unhappy customers"]],
+    title: "Your leads dashboard", calls: "1,240", kpis: [["86", "hot leads"], ["23", "never called back", "bad"], ["9", "unhappy customers"]],
     listTitle: "Call back today", cols: ["Lead", "Wanted", "Waiting", "Owner"],
     rows: [["Amit S.", "A quote", "4 days", "Rahul"], ["Priya K.", "A demo", "3 days", "Sunil"], ["Vikas M.", "Pricing", "6 days", "Rahul"]],
     why: [["Price too high", 34], ["Chose a competitor", 21], ["Not the right time", 18], ["Needed more info", 15], ["Other", 12]],
     best: "Sunil turns 41% of hot leads into a next step. The team average is 24%.",
   },
   realestate: {
-    title: "Missed-lead report", calls: "1,240", kpis: [["86", "hot leads"], ["23", "never called back", "bad"], ["₹19 Cr", "budgets at stake"]],
+    title: "Your leads dashboard", calls: "1,240", kpis: [["86", "hot leads"], ["23", "never called back", "bad"], ["₹19 Cr", "budgets at stake"]],
     listTitle: "Call back today", cols: ["Lead", "Budget", "Waiting", "Agent"],
     rows: [["Amit S.", "₹85 L", "4 days", "Rahul"], ["Priya K.", "₹1.2 Cr", "3 days", "Sunil"], ["Vikas M.", "₹70 L", "6 days", "Rahul"]],
     why: [["Price", 31], ["Location", 22], ["Possession date", 18], ["Home loan worries", 12], ["Other", 17]],
     best: "Sunil books a site visit for 38% of hot leads. The team average is 21%.",
   },
   coaching: {
-    title: "Missed-admission report", calls: "1,020", kpis: [["140", "interested parents"], ["31", "never called back", "bad"], ["52", "asked about instalments"]],
+    title: "Your admissions dashboard", calls: "1,020", kpis: [["140", "interested parents"], ["31", "never called back", "bad"], ["52", "asked about instalments"]],
     listTitle: "Call back today", cols: ["Parent", "Course", "Waiting", "Counsellor"],
     rows: [["Mrs. Sharma", "NEET 1-year", "3 days", "Neha"], ["Mr. Reddy", "JEE 2-year", "5 days", "Arjun"], ["Mrs. Khan", "NEET repeater", "2 days", "Neha"]],
     why: [["Fee too high", 36], ["Batch timing", 22], ["Chose another institute", 19], ["Hostel / stay", 11], ["Other", 12]],
     best: "Neha turns 44% of demo-class bookings into admissions. The team average is 27%.",
   },
   d2c: {
-    title: "Cancellations and returns report", calls: "2,150", kpis: [["312", "orders cancelled or refused"], ["96", "could have been saved", "bad"], ["₹4.1 L", "order value lost"]],
+    title: "Your orders dashboard", calls: "2,150", kpis: [["312", "orders cancelled or refused"], ["96", "could have been saved", "bad"], ["₹4.1 L", "order value lost"]],
     listTitle: "Most cancelled", cols: ["Product", "Cancels", "Main reason", ""],
-    rows: [["Linen kurta", "41", "Wrong size", ""], ["Denim jacket", "23", "Refused at door", ""], ["White sneakers", "18", "Late delivery", ""]],
-    why: [["Wrong size", 28], ["Refused at the door", 20], ["Delivery too slow", 18], ["Changed mind", 16], ["Found it cheaper", 10], ["Other", 8]],
+    rows: [["Vitamin C serum", "41", "Ordered by mistake", ""], ["Sunscreen 50 ml", "23", "Refused at door", ""], ["Hair oil", "18", "Late delivery", ""]],
+    why: [["Ordered by mistake", 28], ["Refused at the door", 20], ["Delivery too slow", 18], ["Changed mind", 16], ["Found it cheaper", 10], ["Other", 8]],
     best: "Pooja saves 1 in 3 orders on confirmation and delivery calls. The team average is 1 in 5.",
   },
   clinic: {
-    title: "Missed-appointment report", calls: "1,860", kpis: [["214", "wanted an appointment"], ["61", "didn't book", "bad"], ["37", "asked for weekends"]],
+    title: "Your appointments dashboard", calls: "1,860", kpis: [["214", "wanted an appointment"], ["61", "didn't book", "bad"], ["37", "asked for weekends"]],
     listTitle: "Call back today", cols: ["Caller", "For", "Waiting", "Desk"],
     rows: [["Anita R.", "Knee pain", "2 days", "Evening"], ["Rohan P.", "Skin allergy", "1 day", "Morning"], ["Meera J.", "Child's fever", "1 day", "Evening"]],
     why: [["No weekend slot", 33], ["Doctor unavailable", 24], ["Fees", 17], ["Long wait", 14], ["Other", 12]],
@@ -79,8 +79,8 @@ for (const [k, r] of Object.entries(REPORTS)) {
 function report(key, r) {
   const cols = r.cols.filter(Boolean);
   return `          <article class="report-card" data-show="${key}">
-            <div class="rc-head"><span class="rc-title">${r.title}</span><span class="rc-tag">Sample</span></div>
-            <p class="rc-range">Last 30 days · ${r.calls} calls checked by AI</p>
+            <div class="rc-head"><span class="rc-title">${r.title}</span><span class="rc-tag">Example</span></div>
+            <p class="rc-range">This month · ${r.calls} calls checked by AI</p>
             <div class="kpis">${r.kpis.map(([n, l, c]) => `<div${c ? ` class="${c}"` : ""}><b>${n}</b><span>${l}</span></div>`).join("")}</div>
             <p class="rc-sub">${r.listTitle}</p>
             <div class="tbl-wrap"><table class="tbl">
@@ -97,11 +97,11 @@ function report(key, r) {
 const CALLS = fs.readFileSync(path.join(PARTS, "calls.html"), "utf8").trimEnd();
 const CHATS = fs.readFileSync(path.join(PARTS, "chats.html"), "utf8").trimEnd();
 
-const REPORT_NAME = show({ general: "missed-lead report", realestate: "missed-lead report", coaching: "missed-admission report", d2c: "cancellations report", clinic: "missed-appointment report" });
 
 const FAQ = [
   ["What do you need from us?", "For the demo, nothing. When you start: read-only access to your call recordings, plus your lead, order or appointment list. No recordings yet? We set up recording on your team's phones."],
-  ["Which languages?", "Hindi, English, Tamil, Telugu, Marathi, Bengali, Gujarati, Kannada, Arabic, Spanish and 50+ more, including calls that switch languages. Reports come back in English."],
+  ["Do my team need new phones or SIMs?", "Usually not. In the demo we check what your team uses today and show you the simplest setup."],
+  ["Which languages?", "Hindi, English, Tamil, Telugu, Marathi, Bengali, Gujarati, Kannada, Arabic, Spanish and 50+ more, including calls that switch languages. Results come back in English."],
   ["How fast?", "A demo within one working day. Once you start, daily alerts and the dashboard in about a week. Monthly plan, cancel any time."],
   ["Is recording calls legal?", "Yes, with notice. We set up the \"this call may be recorded\" message for you. We follow India's DPDP Act and, for Europe and the UK, GDPR."],
 ];
@@ -205,7 +205,7 @@ const html = `<!doctype html>
           <p class="fine"><b>20 minutes. No data needed.</b> ${show({ general: "We show you where leads leak, live on real calls.", realestate: "We show you which site-visit leads go cold, live on real calls.", coaching: "We show you which parents go cold, live on real calls.", d2c: "We show you where orders fail, by product, courier and PIN code.", clinic: "We show you which callers didn't book, and why." })}</p>
         </div>
 
-        <div class="hero-visual" aria-label="Sample report">
+        <div class="hero-visual" aria-label="Example dashboard">
 ${Object.entries(REPORTS).map(([k, r]) => report(k, r)).join("\n")}
         </div>
       </div>
@@ -322,7 +322,7 @@ ${FAQ.map(([q, a]) => `          <details><summary>${q}</summary><p>${a}</p></de
           <label class="hp" aria-hidden="true">Leave this empty<input name="company_site" tabindex="-1" autocomplete="off"></label>
           <p class="form-status" role="alert"></p>
           <button class="btn btn-block" type="submit">Book my demo</button>
-          <p class="form-note">We never contact your customers. <a href="/privacy">Privacy</a></p>
+          <p class="form-note">We'll reply on WhatsApp or email within one working day to fix a time. We never contact your customers. <a href="/privacy">Privacy</a></p>
         </form>
 
         <div class="card done" id="lead-done" tabindex="-1" hidden>
