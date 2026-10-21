@@ -40,25 +40,13 @@
     items.forEach((el) => el.classList.add("in"));
   }
 
-  // "Book a demo" / "Get your report" links pre-select the form choice
-  document.querySelectorAll("[data-want]").forEach((el) => el.addEventListener("click", () => {
-    const r = document.querySelector(`input[name="request_type"][value="${el.dataset.want}"]`);
-    if (r) r.checked = true;
-    const btn = document.querySelector('#lead-form button[type="submit"]');
-    if (btn) btn.textContent = el.dataset.want === "report" ? "Get my report" : "Book my demo";
-  }));
-  document.querySelectorAll('input[name="request_type"]').forEach((r) => r.addEventListener("change", () => {
-    const btn = document.querySelector('#lead-form button[type="submit"]');
-    if (btn) btn.textContent = r.value === "report" ? "Get my report" : "Book my demo";
-  }));
-
   // ---------- demo form ----------
   const form = document.getElementById("lead-form");
   if (!form) return;
   const done = document.getElementById("lead-done");
   const status = form.querySelector(".form-status");
   const submit = form.querySelector('button[type="submit"]');
-  const labelOf = () => (form.querySelector('input[name="request_type"]:checked') || {}).value === "report" ? "Get my report" : "Book my demo";
+  const label = submit.textContent;
   const startedAt = Date.now();
   const params = new URLSearchParams(location.search);
 
@@ -99,7 +87,7 @@
       utm_campaign: params.get("utm_campaign") || "",
       referrer: document.referrer || "",
       landing_page: location.pathname,
-      request_type: (fd.get("request_type") || "demo").toString(),
+      request_type: "demo",
       started_at: startedAt,
     };
   }
@@ -150,7 +138,7 @@
       status.textContent = "We couldn't reach the server. Please check your connection and try again.";
     } finally {
       submit.disabled = false;
-      submit.textContent = labelOf();
+      submit.textContent = label;
     }
   });
 })();

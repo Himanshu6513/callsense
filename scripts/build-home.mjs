@@ -100,9 +100,9 @@ const CHATS = fs.readFileSync(path.join(PARTS, "chats.html"), "utf8").trimEnd();
 const REPORT_NAME = show({ general: "missed-lead report", realestate: "missed-lead report", coaching: "missed-admission report", d2c: "cancellations report", clinic: "missed-appointment report" });
 
 const FAQ = [
-  ["What do you need from us?", "For the demo, nothing. For a report on your own calls: read-only access to your call recordings, plus your lead, order or appointment list. No recordings yet? We set up recording on your team's phones."],
+  ["What do you need from us?", "For the demo, nothing. When you start: read-only access to your call recordings, plus your lead, order or appointment list. No recordings yet? We set up recording on your team's phones."],
   ["Which languages?", "Hindi, English, Tamil, Telugu, Marathi, Bengali, Gujarati, Kannada, Arabic, Spanish and 50+ more, including calls that switch languages. Reports come back in English."],
-  ["How fast?", "A demo within one working day. A report on your own calls 48 hours after we connect. Daily alerts and the dashboard in about a week. Continue on a monthly plan, cancel any time."],
+  ["How fast?", "A demo within one working day. Once you start, daily alerts and the dashboard in about a week. Monthly plan, cancel any time."],
   ["Is recording calls legal?", "Yes, with notice. We set up the \"this call may be recorded\" message for you. We follow India's DPDP Act and, for Europe and the UK, GDPR."],
 ];
 
@@ -117,7 +117,7 @@ const LD = {
       areaServed: [{ "@type": "Country", name: "India" }, { "@type": "Place", name: "Worldwide" }],
       availableLanguage: ["Hindi", "English", "Tamil", "Telugu", "Marathi", "Bengali", "Gujarati", "Kannada", "Arabic", "Spanish"],
       audience: IND.map(([n]) => ({ "@type": "BusinessAudience", audienceType: n })),
-      description: "AI that checks every sales and customer call in 50+ languages and shows which leads were never called back, why people didn't buy and who on the team sells best, with a live dashboard, daily alerts and answers in ChatGPT or Claude. Starts with a free 20-minute demo, or a missed-lead report on the last 30 days of calls.",
+      description: "AI that checks every sales and customer call in 50+ languages and shows which leads were never called back, why people didn't buy and who on the team sells best, with a live dashboard, daily alerts and answers in ChatGPT or Claude. Starts with a free 20-minute demo.",
     },
     { "@type": "FAQPage", "@id": `${S}/#faq`, mainEntity: FAQ.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) },
   ],
@@ -203,7 +203,6 @@ const html = `<!doctype html>
           })}</p>
           <div class="cta-row"><a class="btn" href="#demo" data-want="demo">Book a free demo</a></div>
           <p class="fine"><b>20 minutes. No data needed.</b> ${show({ general: "We show you where leads leak, live on real calls.", realestate: "We show you which site-visit leads go cold, live on real calls.", coaching: "We show you which parents go cold, live on real calls.", d2c: "We show you where orders fail, by product, courier and PIN code.", clinic: "We show you which callers didn't book, and why." })}</p>
-          <p class="fine">Prefer proof on your own calls? <a href="#demo" data-want="report">Get your ${REPORT_NAME}</a> on the last 30 days, 48 hours after we connect.</p>
         </div>
 
         <div class="hero-visual" aria-label="Sample report">
@@ -222,7 +221,7 @@ ${Object.entries(REPORTS).map(([k, r]) => report(k, r)).join("\n")}
           <label class="field"><span>${show({general:"Value of one sale",realestate:"Your earning per sale",coaching:"Fee per student",d2c:"Average order value",clinic:"Value of one new patient"})}</span><span class="money"><select name="cur" aria-label="Currency"><option value="INR">₹</option><option value="USD">$</option><option value="EUR">€</option><option value="GBP">£</option></select><input name="value" type="number" inputmode="numeric" min="0" value="50000" aria-label="Value of one sale"></span></label>
           <output class="calc-out" name="out" aria-live="polite"><b data-out="month">₹1,00,000</b> lost a month<span><b data-out="year">₹12,00,000</b> a year</span></output>
         </form>
-        <p class="note reveal">Your report shows exactly which ones these are.</p>
+        <p class="note reveal">In the demo, we show how to find exactly which ones these are.</p>
       </div>
     </section>
 
@@ -310,13 +309,6 @@ ${FAQ.map(([q, a]) => `          <details><summary>${q}</summary><p>${a}</p></de
             <label class="field"><span>Company</span><input name="company" autocomplete="organization" required><small class="err" data-for="company"></small></label>
             <label class="field"><span>Email <em>(optional)</em></span><input name="email" type="email" autocomplete="email"><small class="err" data-for="email"></small></label>
           </div>
-          <fieldset class="field">
-            <legend>I'd like</legend>
-            <div class="seg">
-              <label><input type="radio" name="request_type" value="demo" checked><span>A free demo</span></label>
-              <label><input type="radio" name="request_type" value="report"><span>A report on my last 30 days of calls</span></label>
-            </div>
-          </fieldset>
           <label class="field"><span>Your business</span>
             <select name="industry" required><option value="">Choose</option>${IND.map(([n, , , v]) => `<option value="${v}">${esc(n)}</option>`).join("")}<option value="other">Other</option></select>
             <small class="err" data-for="industry"></small>

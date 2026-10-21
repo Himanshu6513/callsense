@@ -1,6 +1,6 @@
 # CallSense
 
-> CallSense uses AI to check every sales and customer call a business's team makes, in 50+ languages, and shows which leads were never called back, why people didn't buy, and who on the team sells best. Results go into a live dashboard with daily alerts, and owners can ask ChatGPT or Claude about their calls. Built for Indian businesses and usable worldwide. It starts with a free 20-minute demo (no data needed), or a missed-lead report on the last 30 days of calls, delivered 48 hours after connecting; then a monthly plan, cancel any time.
+> CallSense uses AI to check every sales and customer call a business's team makes, in 50+ languages, and shows which leads were never called back, why people didn't buy, and who on the team sells best. Results go into a live dashboard with daily alerts, and owners can ask ChatGPT or Claude about their calls. Built for Indian businesses and usable worldwide. It starts with a free 20-minute demo (no data needed); then a monthly plan, cancel any time.
 
 ## What we deliver
 
@@ -60,5 +60,5 @@ Each business's calls are kept in their own private database, sent over encrypte
 
 ## Contact
 
-- Book a free demo, or ask for a missed-lead report on the last 30 days of calls: https://callsense.in/#demo
+- Book a free 20-minute demo: https://callsense.in/#demo
 - Email: himanshu@callsense.in
