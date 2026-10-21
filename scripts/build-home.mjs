@@ -52,7 +52,7 @@ const REPORTS = {
   coaching: {
     title: "Missed-admission report", calls: "1,020", kpis: [["140", "interested parents"], ["31", "never called back", "bad"], ["52", "asked about instalments"]],
     listTitle: "Call back today", cols: ["Parent", "Course", "Waiting", "Counsellor"],
-    rows: [["Mrs. Sharma", "JEE 2-year", "3 days", "Neha"], ["Mr. Reddy", "NEET 1-year", "5 days", "Arjun"], ["Mrs. Khan", "Foundation", "2 days", "Neha"]],
+    rows: [["Mrs. Sharma", "NEET 1-year", "3 days", "Neha"], ["Mr. Reddy", "JEE 2-year", "5 days", "Arjun"], ["Mrs. Khan", "NEET repeater", "2 days", "Neha"]],
     why: [["Fee too high", 36], ["Batch timing", 22], ["Chose another institute", 19], ["Hostel / stay", 11], ["Other", 12]],
     best: "Neha turns 44% of demo-class bookings into admissions. The team average is 27%.",
   },
@@ -65,10 +65,10 @@ const REPORTS = {
   },
   clinic: {
     title: "Missed-appointment report", calls: "1,860", kpis: [["214", "wanted an appointment"], ["61", "didn't book", "bad"], ["37", "asked for weekends"]],
-    listTitle: "Call back today", cols: ["Caller", "For", "Waiting", "Branch"],
-    rows: [["Anita R.", "Knee pain", "2 days", "Whitefield"], ["Rohan P.", "Skin allergy", "1 day", "Indiranagar"], ["Meera J.", "Child's fever", "1 day", "Whitefield"]],
+    listTitle: "Call back today", cols: ["Caller", "For", "Waiting", "Desk"],
+    rows: [["Anita R.", "Knee pain", "2 days", "Evening"], ["Rohan P.", "Skin allergy", "1 day", "Morning"], ["Meera J.", "Child's fever", "1 day", "Evening"]],
     why: [["No weekend slot", 33], ["Doctor unavailable", 24], ["Fees", 17], ["Long wait", 14], ["Other", 12]],
-    best: "Indiranagar branch books 72% of callers. Whitefield books 41%.",
+    best: "The morning desk books 72% of callers. The evening desk books 41%.",
   },
 };
 for (const [k, r] of Object.entries(REPORTS)) {
@@ -100,9 +100,9 @@ const CHATS = fs.readFileSync(path.join(PARTS, "chats.html"), "utf8").trimEnd();
 const REPORT_NAME = show({ general: "missed-lead report", realestate: "missed-lead report", coaching: "missed-admission report", d2c: "cancellations report", clinic: "missed-appointment report" });
 
 const FAQ = [
-  ["What do you need from us?", "Read-only access to your call recordings, plus your lead, order or appointment list if you have one. No recordings yet? We set up recording on your team's phones."],
+  ["What do you need from us?", "For the demo, nothing. For a report on your own calls: read-only access to your call recordings, plus your lead, order or appointment list. No recordings yet? We set up recording on your team's phones."],
   ["Which languages?", "Hindi, English, Tamil, Telugu, Marathi, Bengali, Gujarati, Kannada, Arabic, Spanish and 50+ more, including calls that switch languages. Reports come back in English."],
-  ["How fast?", "Your report 48 hours after we connect to your calls. Daily alerts and the dashboard in about a week."],
+  ["How fast?", "A demo within one working day. A report on your own calls 48 hours after we connect. Daily alerts and the dashboard in about a week. Continue on a monthly plan, cancel any time."],
   ["Is recording calls legal?", "Yes, with notice. We set up the \"this call may be recorded\" message for you. We follow India's DPDP Act and, for Europe and the UK, GDPR."],
 ];
 
@@ -117,7 +117,7 @@ const LD = {
       areaServed: [{ "@type": "Country", name: "India" }, { "@type": "Place", name: "Worldwide" }],
       availableLanguage: ["Hindi", "English", "Tamil", "Telugu", "Marathi", "Bengali", "Gujarati", "Kannada", "Arabic", "Spanish"],
       audience: IND.map(([n]) => ({ "@type": "BusinessAudience", audienceType: n })),
-      description: "AI that checks every sales and customer call in 50+ languages and shows which leads were never called back, why people didn't buy and who on the team sells best, with a live dashboard, daily alerts and answers in ChatGPT or Claude. Starts with a missed-lead report on the last 30 days of calls.",
+      description: "AI that checks every sales and customer call in 50+ languages and shows which leads were never called back, why people didn't buy and who on the team sells best, with a live dashboard, daily alerts and answers in ChatGPT or Claude. Starts with a free 20-minute demo, or a missed-lead report on the last 30 days of calls.",
     },
     { "@type": "FAQPage", "@id": `${S}/#faq`, mainEntity: FAQ.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) },
   ],
@@ -176,7 +176,7 @@ const html = `<!doctype html>
         <a href="#industries">Industries</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a class="btn btn-sm" href="#demo">Get my report</a>
+      <a class="btn btn-sm" href="#demo" data-want="demo">Book a demo</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span></button>
     </div>
   </header>
@@ -191,25 +191,19 @@ const html = `<!doctype html>
             general: 'Know which leads your team lost, <span class="grad">and why.</span>',
             realestate: 'Know which site-visit leads <span class="grad">nobody called back.</span>',
             coaching: 'Know which interested parents <span class="grad">never got a call back.</span>',
-            d2c: 'Know why COD orders get cancelled or refused, <span class="grad">and save them.</span>',
+            d2c: 'Know why COD orders get cancelled or go RTO, <span class="grad">and save them.</span>',
             clinic: 'Know who wanted an appointment <span class="grad">and didn\'t book.</span>',
           })}</h1>
           <p class="lede">${show({
             general: "Our AI checks every call, in 50+ languages, and tells you who to call back today, why people didn't buy, and who on your team sells best.",
             realestate: "Our AI checks every call, in 50+ languages, and tells you who to call back today, why buyers said no, and which agent books the most site visits.",
             coaching: "Our AI checks every call, in 50+ languages, and tells you which parents to call back today, why they didn't join, and which counsellor converts best.",
-            d2c: "Our AI checks every confirmation and delivery call, in 50+ languages, and tells you why orders fail, by product, courier and PIN code, and who saves the most.",
-            clinic: "Our AI checks every call, in 50+ languages, and tells you who to call back today, why callers didn't book, and how each branch and doctor's desk performs.",
+            d2c: "Our AI checks every confirmation and NDR call, in 50+ languages, and tells you why orders fail, by product, courier and PIN code, and who saves the most.",
+            clinic: "Our AI checks every call, in 50+ languages, and tells you who to call back today, why callers didn't book, and how each desk or branch performs.",
           })}</p>
-          <div class="cta-row"><a class="btn" href="#demo"><span>Get my ${REPORT_NAME}</span></a></div>
-          <p class="fine">Your last 30 days of calls, results 48 hours after we connect. Keep the report either way. Like it? Continue on a monthly plan, cancel any time.</p>
-          <p class="fine">${show({
-            general: "Send your lead list too, and we flag every lead that never got a call.",
-            realestate: "Send your lead list from 99acres, MagicBricks or Facebook too, and we flag every lead that never got a call.",
-            coaching: "Send your enquiry sheet too, and we flag every parent who never got a call.",
-            d2c: "Send your order export too, and we match every call to its order and courier.",
-            clinic: "Send your appointment list too, and we flag every caller who never got booked.",
-          })} No call recording yet? We set it up on your team's phones, and your first report covers the first 7 days.</p>
+          <div class="cta-row"><a class="btn" href="#demo" data-want="demo">Book a free demo</a></div>
+          <p class="fine"><b>20 minutes. No data needed.</b> We show you where leads leak and how it works with your team's phones.</p>
+          <p class="fine">Prefer proof on your own calls? <a href="#demo" data-want="report">Get your ${REPORT_NAME}</a> on the last 30 days, 48 hours after we connect.</p>
         </div>
 
         <div class="hero-visual" aria-label="Sample report">
@@ -303,8 +297,8 @@ ${FAQ.map(([q, a]) => `          <details><summary>${q}</summary><p>${a}</p></de
     <section class="section alt" id="demo">
       <div class="wrap form-wrap">
         <div class="sec-head center reveal">
-          <h2>Get your ${REPORT_NAME}.</h2>
-          <p class="sec-lede">We check your last 30 days of calls and send the report on WhatsApp or email, 48 hours after we connect.</p>
+          <h2>Book your free demo.</h2>
+          <p class="sec-lede">20 minutes on a call or video. We show where your leads leak and how CallSense would work with your phones.</p>
         </div>
 
         <form class="form card" id="lead-form" novalidate>
@@ -316,20 +310,27 @@ ${FAQ.map(([q, a]) => `          <details><summary>${q}</summary><p>${a}</p></de
             <label class="field"><span>Company</span><input name="company" autocomplete="organization" required><small class="err" data-for="company"></small></label>
             <label class="field"><span>Email <em>(optional)</em></span><input name="email" type="email" autocomplete="email"><small class="err" data-for="email"></small></label>
           </div>
+          <fieldset class="field">
+            <legend>I'd like</legend>
+            <div class="seg">
+              <label><input type="radio" name="request_type" value="demo" checked><span>A free demo</span></label>
+              <label><input type="radio" name="request_type" value="report"><span>A report on my last 30 days of calls</span></label>
+            </div>
+          </fieldset>
           <label class="field"><span>Your business</span>
             <select name="industry" required><option value="">Choose</option>${IND.map(([n, , , v]) => `<option value="${v}">${esc(n)}</option>`).join("")}<option value="other">Other</option></select>
             <small class="err" data-for="industry"></small>
           </label>
           <label class="hp" aria-hidden="true">Leave this empty<input name="company_site" tabindex="-1" autocomplete="off"></label>
           <p class="form-status" role="alert"></p>
-          <button class="btn btn-block" type="submit">Get my report</button>
+          <button class="btn btn-block" type="submit">Book my demo</button>
           <p class="form-note">We never contact your customers. <a href="/privacy">Privacy</a></p>
         </form>
 
         <div class="card done" id="lead-done" tabindex="-1" hidden>
           <div class="done-icon" aria-hidden="true">✓</div>
           <h3>Thank you. Request received.</h3>
-          <p>We'll reach you within one working day to connect your calls. Your report follows 48 hours later.</p>
+          <p>We'll WhatsApp or email you within one working day to fix a time.</p>
           <p class="fine">In a hurry? Email <a href="mailto:himanshu@callsense.in">himanshu@callsense.in</a></p>
         </div>
       </div>

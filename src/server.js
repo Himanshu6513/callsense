@@ -46,7 +46,8 @@ CREATE TABLE IF NOT EXISTS callsense_leads (
   status         TEXT NOT NULL DEFAULT 'new'
 );
 CREATE INDEX IF NOT EXISTS callsense_leads_created_at_idx ON callsense_leads (created_at DESC);
-COMMENT ON TABLE callsense_leads IS 'Missed-lead report requests from callsense.in. status: new / contacted / won / lost.';
+ALTER TABLE callsense_leads ADD COLUMN IF NOT EXISTS request_type TEXT;
+COMMENT ON TABLE callsense_leads IS 'Demo and report requests from callsense.in. status: new / contacted / won / lost.';
 `;
 
 let dbReady = false;
@@ -80,6 +81,7 @@ const SYSTEMS = new Set([
   "mobile_sim", "panel_dialer", "other", "not_sure",
 ]);
 const LANGS = new Set(["hindi", "english", "hinglish", "marathi", "gujarati", "bengali", "tamil", "telugu", "kannada", "malayalam", "punjabi", "other"]);
+const REQUEST_TYPES = new Set(["demo", "report"]);
 const EMAIL_RE = /^[^\s@]{1,64}@[^\s@]{1,190}\.[a-z]{2,24}$/i;
 
 const clean = (v, max) =>
@@ -108,6 +110,7 @@ function validate(body) {
     utm_campaign: clean(body.utm_campaign, 160) || null,
     referrer: clean(body.referrer, 500) || null,
     landing_page: clean(body.landing_page, 200) || null,
+    request_type: pick(body.request_type, REQUEST_TYPES) || "demo",
   };
   const n = digits(lead.phone).length;
   if (lead.full_name.length < 2) errors.full_name = "Please enter your name.";
@@ -212,15 +215,16 @@ app.post("/api/leads", express.json({ limit: "20kb" }), async (req, res) => {
     await pool.query(
       `INSERT INTO callsense_leads (full_name, phone, email, company, city, industry, team_size, calls_per_day,
                                     phone_system, languages, message, utm_source, utm_medium, utm_campaign,
-                                    referrer, landing_page, user_agent)
-       VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17)`,
+                                    referrer, landing_page, user_agent, request_type)
+       VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18)`,
       [
         lead.full_name, lead.phone, lead.email, lead.company, lead.city, lead.industry, lead.team_size,
         lead.calls_per_day, lead.phone_system, lead.languages, lead.message, lead.utm_source, lead.utm_medium,
         lead.utm_campaign, lead.referrer, lead.landing_page, clean(req.get("user-agent") || "", 400) || null,
+        lead.request_type,
       ]
     );
-    console.log(`New report request (industry=${lead.industry}).`);
+    console.log(`New ${lead.request_type} request (industry=${lead.industry}).`);
     res.status(201).json({ ok: true });
   } catch (e) {
     console.error("Insert failed:", e.message);
