@@ -202,7 +202,7 @@ const html = `<!doctype html>
             clinic: "Our AI checks every call, in 50+ languages, and tells you who to call back today, why callers didn't book, and how each desk or branch performs.",
           })}</p>
           <div class="cta-row"><a class="btn" href="#demo" data-want="demo">Book a free demo</a></div>
-          <p class="fine"><b>20 minutes. No data needed.</b> We show you where leads leak and how it works with your team's phones.</p>
+          <p class="fine"><b>20 minutes. No data needed.</b> ${show({ general: "We show you where leads leak, live on real calls.", realestate: "We show you which site-visit leads go cold, live on real calls.", coaching: "We show you which parents go cold, live on real calls.", d2c: "We show you where orders fail, by product, courier and PIN code.", clinic: "We show you which callers didn't book, and why." })}</p>
           <p class="fine">Prefer proof on your own calls? <a href="#demo" data-want="report">Get your ${REPORT_NAME}</a> on the last 30 days, 48 hours after we connect.</p>
         </div>
 
