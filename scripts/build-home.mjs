@@ -159,7 +159,7 @@ const html = `<!doctype html>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="/styles.css?v=11">
+  <link rel="stylesheet" href="/styles.css?v=12">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -297,7 +297,13 @@ ${FAQ.map(([q, a]) => `          <details><summary>${q}</summary><p>${a}</p></de
       <div class="wrap form-wrap">
         <div class="sec-head center reveal">
           <h2>Book your free demo.</h2>
-          <p class="sec-lede">20 minutes on a call or video. We show where your leads leak and how CallSense would work with your phones.</p>
+          <p class="sec-lede">20 minutes on a call or video. No data needed. You'll see:</p>
+          <ul class="ticks demo-gets">
+            <li>${show({ general: "Real sales calls analysed live by AI", realestate: "Real property enquiry calls analysed live", coaching: "Real admission calls analysed live", d2c: "Real confirmation and NDR calls analysed live", clinic: "Real front-desk calls analysed live" })}</li>
+            <li>${show({ general: "The morning list of leads to call back", realestate: "The morning list of site-visit leads to call back", coaching: "The morning list of parents to call back", d2c: "Which orders could be saved, and why", clinic: "The list of callers to call back today" })}</li>
+            <li>How it works with your team's phones</li>
+            <li>What it would cost for your team</li>
+          </ul>
         </div>
 
         <form class="form card" id="lead-form" novalidate>

@@ -319,6 +319,9 @@ html[data-ind="clinic"] [data-show]:not([data-show~="clinic"]) { display: none !
 
 .logo-404 { margin: 0 auto 24px; }
 
+/* what the free demo shows */
+.demo-gets { max-width: 26em; margin: 18px auto 0; text-align: left; gap: 10px; }
+
 /* how it works, compact */
 .gap-top { margin-top: 24px; }
 .mini-steps { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 10px; }
