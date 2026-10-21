@@ -4,7 +4,7 @@
 
 ## What we deliver
 
-- Every call transcribed automatically after it ends, from the business's calling system (Superfone, Exotel, MyOperator, Knowlarity, Aircall, RingCentral and most systems that record calls).
+- Every call transcribed automatically after it ends, from the business's calling app, dialer or team phones. No recording yet? It is set up on the phones the team already uses.
 - Mood and intent labels for each call (for example keen, unsure, angry, just browsing), with the reason.
 - Key details pulled out of every call into the same fields, chosen with the business: budget, product or course, appointment, order, objection, next step.
 - A live dashboard: calls by agent, outcomes, lost reasons, follow-ups due.
@@ -18,24 +18,24 @@ Hindi, English, Tamil, Telugu, Marathi, Bengali, Gujarati, Kannada, Arabic, Span
 
 ## Who it is for
 
-Any business that talks to customers on the phone, for example:
+Any business that talks to customers on the phone. Where leads leak, by industry:
 
-- Real estate: leads never called back
-- Coaching & edtech: parents not followed up
-- D2C & e-commerce: why cod orders cancel
-- Clinics & hospitals: appointments not booked
-- Insurance: policies not closed
-- Loans & NBFCs: applications dropped
-- Car & bike dealers: test drives not booked
-- Travel & tours: enquiries gone cold
-- B2B & manufacturing: quotes not chased
-- Solar & home services: site visits missed
-- Interiors & furniture: quotes never followed up
-- Hotels & banquets: bookings lost
-- Schools & colleges: admissions missed
-- Recruitment & staffing: candidates dropped
-- Gyms & salons: trials not converted
-- Software & SaaS: demos not booked
+- Real estate: site-visit leads never followed up
+- Coaching & education: interested parents never called back
+- E-commerce & D2C: orders cancelled on confirmation calls
+- Clinics & hospitals: callers who never booked
+- Insurance: quotes not closed, renewals not called
+- Loans & finance: applications dropped after the first call
+- Car & bike dealers: test drives never booked
+- Travel & tours: enquiries lost to a competitor
+- B2B & manufacturing: quotes sent, never chased
+- Solar & home services: site surveys never scheduled
+- Interiors & furniture: consultations not followed up
+- Hotels & events: booking enquiries lost on price
+- Schools & colleges: admission enquiries gone cold
+- Recruitment & staffing: candidates who dropped out
+- Gyms & salons: trial visitors never converted
+- Software & SaaS: demo requests never booked
 
 ## Privacy
 
@@ -56,7 +56,7 @@ Each business's calls are kept in their own private database, sent over encrypte
 - [How to analyse sales calls in Hindi and other languages](https://callsense.in/guides/analyse-sales-call-recordings-in-hindi)
 - [Superfone call recordings: how to get insights and ask ChatGPT](https://callsense.in/guides/superfone-call-recording-analysis)
 - [Real estate sales calls: what to track to get more site visits](https://callsense.in/guides/real-estate-sales-call-tracking)
-- [What is call intelligence? A plain guide for Indian businesses](https://callsense.in/guides/what-is-call-intelligence)
+- [What is call intelligence? A guide for Indian businesses](https://callsense.in/guides/what-is-call-intelligence)
 
 ## Contact
 
