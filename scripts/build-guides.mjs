@@ -8,7 +8,7 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = path.join(ROOT, "public", "guides");
 const SITE = "https://callsense.in";
 const PUBLISHED = "2026-10-21";
-const CSS = "/styles.css?v=1";
+const CSS = "/styles.css?v=12";
 
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const MARK = `<img class="brand-mark" src="/logo.svg" alt="" width="28" height="28">`;
