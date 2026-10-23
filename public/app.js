@@ -66,12 +66,19 @@
   form.addEventListener("input", (e) => e.target.name && clearError(e.target.name));
   form.addEventListener("change", (e) => e.target.name && clearError(e.target.name));
 
+  // "98765 43210" + "+91" -> "+91 9876543210"; a number typed with its own + code is kept as typed
+  function fullPhone(code, num) {
+    if (num.startsWith("+")) return num;
+    const digits = num.replace(/\D/g, "").replace(/^0+/, "");
+    return digits ? `${code || "+91"} ${digits}` : "";
+  }
+
   function collect() {
     const fd = new FormData(form);
     const s = (k) => (fd.get(k) || "").toString().trim();
     return {
       full_name: s("full_name"),
-      phone: s("phone"),
+      phone: fullPhone(s("country_code"), s("phone")),
       email: s("email"),
       company: s("company"),
       city: s("city"),
@@ -96,7 +103,8 @@
     const errs = {};
     const n = d.phone.replace(/\D/g, "").length;
     if (d.full_name.length < 2) errs.full_name = "Please enter your name.";
-    if (n < 7 || n > 15) errs.phone = "Please enter your phone number, with country code if outside India.";
+    const indian = d.phone.startsWith("+91 ");
+    if (indian ? n !== 12 : n < 7 || n > 15) errs.phone = indian ? "Please enter your 10-digit mobile number." : "Please check your phone number.";
     if (d.email && !/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(d.email)) errs.email = "Please check this email address.";
     if (d.company.length < 2) errs.company = "Please enter your company name.";
     if (!d.industry) errs.industry = "Please choose your business type.";

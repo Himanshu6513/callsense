@@ -14,6 +14,8 @@ const esc = (s) => s.replace(/&/g, "&amp;");
 const show = (o) => Object.entries(o).map(([k, v]) => `<span data-show="${k}">${v}</span>`).join("");
 
 // ---------- industries: name, where leads leak, page, form value ----------
+// country codes for the phone field: India first, then common markets
+const CODES = [["IN", "+91"], ["US", "+1"], ["GB", "+44"], ["AE", "+971"], ["SA", "+966"], ["QA", "+974"], ["OM", "+968"], ["KW", "+965"], ["SG", "+65"], ["MY", "+60"], ["AU", "+61"], ["NZ", "+64"], ["CA", "+1"], ["DE", "+49"], ["FR", "+33"], ["NL", "+31"], ["ZA", "+27"], ["NP", "+977"], ["BD", "+880"], ["LK", "+94"]];
 const IND = [
   ["Real estate", "Site-visit leads never followed up", "/real-estate", "real_estate"],
   ["Coaching & education", "Interested parents never called back", "/coaching", "coaching"],
@@ -159,7 +161,7 @@ const html = `<!doctype html>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="/styles.css?v=12">
+  <link rel="stylesheet" href="/styles.css?v=13">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -309,7 +311,7 @@ ${FAQ.map(([q, a]) => `          <details><summary>${q}</summary><p>${a}</p></de
         <form class="form card" id="lead-form" novalidate>
           <div class="row2">
             <label class="field"><span>Your name</span><input name="full_name" autocomplete="name" required><small class="err" data-for="full_name"></small></label>
-            <label class="field"><span>Phone or WhatsApp</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="With country code, e.g. +91" required><small class="err" data-for="phone"></small></label>
+            <label class="field"><span>Phone or WhatsApp</span><span class="money phone-row"><select name="country_code" aria-label="Country code" autocomplete="tel-country-code">${CODES.map(([iso, code]) => `<option value="${code}"${iso === "IN" ? " selected" : ""}>${iso} ${code}</option>`).join("")}</select><input name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="98765 43210" aria-label="Phone number" required></span><small class="err" data-for="phone"></small></label>
           </div>
           <div class="row2">
             <label class="field"><span>Company</span><input name="company" autocomplete="organization" required><small class="err" data-for="company"></small></label>
@@ -345,7 +347,7 @@ ${FAQ.map(([q, a]) => `          <details><summary>${q}</summary><p>${a}</p></de
 
   <script src="/industry.js?v=7" defer></script>
   <script src="/calc.js?v=1" defer></script>
-  <script src="/app.js?v=5" defer></script>
+  <script src="/app.js?v=6" defer></script>
 </body>
 </html>
 `;

@@ -114,7 +114,7 @@ function validate(body) {
   };
   const n = digits(lead.phone).length;
   if (lead.full_name.length < 2) errors.full_name = "Please enter your name.";
-  if (n < 7 || n > 15) errors.phone = "Please enter your phone number, with country code if outside India.";
+  if (n < 7 || n > 15) errors.phone = "Please check your phone number.";
   if (lead.email && !EMAIL_RE.test(lead.email)) errors.email = "Please check this email address.";
   if (lead.company.length < 2) errors.company = "Please enter your company name.";
   if (!lead.industry) errors.industry = "Please choose your business type.";

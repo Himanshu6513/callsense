@@ -34,7 +34,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="/styles.css?v=12">
+  <link rel="stylesheet" href="/styles.css?v=13">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -437,7 +437,7 @@
         <form class="form card" id="lead-form" novalidate>
           <div class="row2">
             <label class="field"><span>Your name</span><input name="full_name" autocomplete="name" required><small class="err" data-for="full_name"></small></label>
-            <label class="field"><span>Phone or WhatsApp</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="With country code, e.g. +91" required><small class="err" data-for="phone"></small></label>
+            <label class="field"><span>Phone or WhatsApp</span><span class="money phone-row"><select name="country_code" aria-label="Country code" autocomplete="tel-country-code"><option value="+91" selected>IN +91</option><option value="+1">US +1</option><option value="+44">GB +44</option><option value="+971">AE +971</option><option value="+966">SA +966</option><option value="+974">QA +974</option><option value="+968">OM +968</option><option value="+965">KW +965</option><option value="+65">SG +65</option><option value="+60">MY +60</option><option value="+61">AU +61</option><option value="+64">NZ +64</option><option value="+1">CA +1</option><option value="+49">DE +49</option><option value="+33">FR +33</option><option value="+31">NL +31</option><option value="+27">ZA +27</option><option value="+977">NP +977</option><option value="+880">BD +880</option><option value="+94">LK +94</option></select><input name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="98765 43210" aria-label="Phone number" required></span><small class="err" data-for="phone"></small></label>
           </div>
           <div class="row2">
             <label class="field"><span>Company</span><input name="company" autocomplete="organization" required><small class="err" data-for="company"></small></label>
@@ -473,6 +473,6 @@
 
   <script src="/industry.js?v=7" defer></script>
   <script src="/calc.js?v=1" defer></script>
-  <script src="/app.js?v=5" defer></script>
+  <script src="/app.js?v=6" defer></script>
 </body>
 </html>

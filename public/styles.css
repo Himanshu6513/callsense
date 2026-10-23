@@ -311,6 +311,7 @@ html[data-ind="clinic"] [data-show]:not([data-show~="clinic"]) { display: none !
 .calc { display: grid; gap: 16px; padding: 24px 20px; box-shadow: var(--shadow); }
 .money { display: flex; gap: 8px; }
 .money select { width: 76px; flex: none; }
+.phone-row select { width: 112px; }
 .calc-out { display: grid; gap: 4px; text-align: center; padding: 18px; border-radius: var(--radius-sm); background: var(--bg-alt); font-size: 17px; color: var(--ink-2); }
 .calc-out > b { font-family: var(--font-display); font-size: clamp(32px, 7vw, 44px); color: var(--neg); letter-spacing: -0.03em; }
 .calc-out span { font-size: 15px; }
