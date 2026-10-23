@@ -314,11 +314,11 @@ ${FAQ.map(([q, a]) => `          <details><summary>${q}</summary><p>${a}</p></de
             <label class="field"><span>Phone or WhatsApp</span><span class="money phone-row"><select name="country_code" aria-label="Country code" autocomplete="tel-country-code">${CODES.map(([iso, code]) => `<option value="${code}"${iso === "IN" ? " selected" : ""}>${iso} ${code}</option>`).join("")}</select><input name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="98765 43210" aria-label="Phone number" required></span><small class="err" data-for="phone"></small></label>
           </div>
           <div class="row2">
-            <label class="field"><span>Company</span><input name="company" autocomplete="organization" required><small class="err" data-for="company"></small></label>
+            <label class="field"><span>Company <em>(optional)</em></span><input name="company" autocomplete="organization"><small class="err" data-for="company"></small></label>
             <label class="field"><span>Email <em>(optional)</em></span><input name="email" type="email" autocomplete="email"><small class="err" data-for="email"></small></label>
           </div>
-          <label class="field"><span>Your business</span>
-            <select name="industry" required><option value="">Choose</option>${IND.map(([n, , , v]) => `<option value="${v}">${esc(n)}</option>`).join("")}<option value="other">Other</option></select>
+          <label class="field"><span>Your business <em>(optional)</em></span>
+            <select name="industry"><option value="">Choose</option>${IND.map(([n, , , v]) => `<option value="${v}">${esc(n)}</option>`).join("")}<option value="other">Other</option></select>
             <small class="err" data-for="industry"></small>
           </label>
           <label class="hp" aria-hidden="true">Leave this empty<input name="company_site" tabindex="-1" autocomplete="off"></label>
@@ -347,7 +347,7 @@ ${FAQ.map(([q, a]) => `          <details><summary>${q}</summary><p>${a}</p></de
 
   <script src="/industry.js?v=7" defer></script>
   <script src="/calc.js?v=1" defer></script>
-  <script src="/app.js?v=6" defer></script>
+  <script src="/app.js?v=7" defer></script>
 </body>
 </html>
 `;

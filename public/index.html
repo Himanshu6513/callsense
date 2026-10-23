@@ -440,11 +440,11 @@
             <label class="field"><span>Phone or WhatsApp</span><span class="money phone-row"><select name="country_code" aria-label="Country code" autocomplete="tel-country-code"><option value="+91" selected>IN +91</option><option value="+1">US +1</option><option value="+44">GB +44</option><option value="+971">AE +971</option><option value="+966">SA +966</option><option value="+974">QA +974</option><option value="+968">OM +968</option><option value="+965">KW +965</option><option value="+65">SG +65</option><option value="+60">MY +60</option><option value="+61">AU +61</option><option value="+64">NZ +64</option><option value="+1">CA +1</option><option value="+49">DE +49</option><option value="+33">FR +33</option><option value="+31">NL +31</option><option value="+27">ZA +27</option><option value="+977">NP +977</option><option value="+880">BD +880</option><option value="+94">LK +94</option></select><input name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="98765 43210" aria-label="Phone number" required></span><small class="err" data-for="phone"></small></label>
           </div>
           <div class="row2">
-            <label class="field"><span>Company</span><input name="company" autocomplete="organization" required><small class="err" data-for="company"></small></label>
+            <label class="field"><span>Company <em>(optional)</em></span><input name="company" autocomplete="organization"><small class="err" data-for="company"></small></label>
             <label class="field"><span>Email <em>(optional)</em></span><input name="email" type="email" autocomplete="email"><small class="err" data-for="email"></small></label>
           </div>
-          <label class="field"><span>Your business</span>
-            <select name="industry" required><option value="">Choose</option><option value="real_estate">Real estate</option><option value="coaching">Coaching &amp; education</option><option value="d2c">E-commerce &amp; D2C</option><option value="clinic">Clinics &amp; hospitals</option><option value="insurance">Insurance</option><option value="loans">Loans &amp; finance</option><option value="automobile">Car &amp; bike dealers</option><option value="travel">Travel &amp; tours</option><option value="b2b_sales">B2B &amp; manufacturing</option><option value="home_services">Solar &amp; home services</option><option value="interiors">Interiors &amp; furniture</option><option value="hospitality">Hotels &amp; events</option><option value="education">Schools &amp; colleges</option><option value="recruitment">Recruitment &amp; staffing</option><option value="fitness_beauty">Gyms &amp; salons</option><option value="saas">Software &amp; SaaS</option><option value="other">Other</option></select>
+          <label class="field"><span>Your business <em>(optional)</em></span>
+            <select name="industry"><option value="">Choose</option><option value="real_estate">Real estate</option><option value="coaching">Coaching &amp; education</option><option value="d2c">E-commerce &amp; D2C</option><option value="clinic">Clinics &amp; hospitals</option><option value="insurance">Insurance</option><option value="loans">Loans &amp; finance</option><option value="automobile">Car &amp; bike dealers</option><option value="travel">Travel &amp; tours</option><option value="b2b_sales">B2B &amp; manufacturing</option><option value="home_services">Solar &amp; home services</option><option value="interiors">Interiors &amp; furniture</option><option value="hospitality">Hotels &amp; events</option><option value="education">Schools &amp; colleges</option><option value="recruitment">Recruitment &amp; staffing</option><option value="fitness_beauty">Gyms &amp; salons</option><option value="saas">Software &amp; SaaS</option><option value="other">Other</option></select>
             <small class="err" data-for="industry"></small>
           </label>
           <label class="hp" aria-hidden="true">Leave this empty<input name="company_site" tabindex="-1" autocomplete="off"></label>
@@ -473,6 +473,6 @@
 
   <script src="/industry.js?v=7" defer></script>
   <script src="/calc.js?v=1" defer></script>
-  <script src="/app.js?v=6" defer></script>
+  <script src="/app.js?v=7" defer></script>
 </body>
 </html>

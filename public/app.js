@@ -106,8 +106,6 @@
     const indian = d.phone.startsWith("+91 ");
     if (indian ? n !== 12 : n < 7 || n > 15) errs.phone = indian ? "Please enter your 10-digit mobile number." : "Please check your phone number.";
     if (d.email && !/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(d.email)) errs.email = "Please check this email address.";
-    if (d.company.length < 2) errs.company = "Please enter your company name.";
-    if (!d.industry) errs.industry = "Please choose your business type.";
     return errs;
   }
 

@@ -29,9 +29,9 @@ CREATE TABLE IF NOT EXISTS callsense_leads (
   full_name      TEXT NOT NULL,
   phone          TEXT NOT NULL,
   email          TEXT,
-  company        TEXT NOT NULL,
+  company        TEXT,
   city           TEXT,
-  industry       TEXT NOT NULL,
+  industry       TEXT,
   team_size      TEXT,
   calls_per_day  TEXT,
   phone_system   TEXT,
@@ -47,6 +47,8 @@ CREATE TABLE IF NOT EXISTS callsense_leads (
 );
 CREATE INDEX IF NOT EXISTS callsense_leads_created_at_idx ON callsense_leads (created_at DESC);
 ALTER TABLE callsense_leads ADD COLUMN IF NOT EXISTS request_type TEXT;
+ALTER TABLE callsense_leads ALTER COLUMN company DROP NOT NULL;
+ALTER TABLE callsense_leads ALTER COLUMN industry DROP NOT NULL;
 COMMENT ON TABLE callsense_leads IS 'Demo and report requests from callsense.in. status: new / contacted / won / lost.';
 `;
 
@@ -95,7 +97,7 @@ function validate(body) {
     full_name: clean(body.full_name, 120),
     phone: clean(body.phone, 40),
     email: clean(body.email, 254).toLowerCase() || null,
-    company: clean(body.company, 160),
+    company: clean(body.company, 160) || null,
     city: clean(body.city, 80) || null,
     industry: pick(body.industry, INDUSTRIES),
     team_size: pick(body.team_size, TEAM),
@@ -116,8 +118,6 @@ function validate(body) {
   if (lead.full_name.length < 2) errors.full_name = "Please enter your name.";
   if (n < 7 || n > 15) errors.phone = "Please check your phone number.";
   if (lead.email && !EMAIL_RE.test(lead.email)) errors.email = "Please check this email address.";
-  if (lead.company.length < 2) errors.company = "Please enter your company name.";
-  if (!lead.industry) errors.industry = "Please choose your business type.";
   return { lead, errors };
 }
 
