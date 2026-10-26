@@ -264,12 +264,35 @@ const INDUSTRY_PAGES = {
   },
 };
 const escAttr = (s) => s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+
+// index.html holds every industry version (marked data-show="..."). Search engines read hidden text
+// too, so each URL is sent only its own version; otherwise every page looks like a copy of the others.
+function keepOnly(html, key) {
+  const open = /<([a-z][a-z0-9]*)\b[^>]*\sdata-show="([^"]*)"[^>]*>/gi;
+  let out = "", from = 0, m;
+  while ((m = open.exec(html))) {
+    if (m[2].split(/\s+/).includes(key)) continue;
+    const tags = new RegExp(`<(/?)${m[1]}\\b[^>]*>`, "gi");
+    tags.lastIndex = open.lastIndex;
+    let depth = 1, t;
+    while (depth && (t = tags.exec(html))) depth += t[1] ? -1 : 1;
+    const end = t ? tags.lastIndex : html.length;
+    out += html.slice(from, m.index);
+    from = open.lastIndex = end;
+  }
+  return out + html.slice(from);
+}
+
 const pageCache = new Map();
+function homePage() {
+  if (!pageCache.has("")) pageCache.set("", keepOnly(fs.readFileSync(path.join(PUBLIC_DIR, "index.html"), "utf8"), "general"));
+  return pageCache.get("");
+}
 function industryPage(slug) {
   if (pageCache.has(slug)) return pageCache.get(slug);
   const a = INDUSTRY_PAGES[slug];
   const url = `https://${CANONICAL_HOST}/${slug}`;
-  const html = fs.readFileSync(path.join(PUBLIC_DIR, "index.html"), "utf8")
+  const html = keepOnly(fs.readFileSync(path.join(PUBLIC_DIR, "index.html"), "utf8"), a.key)
     .replace('<html lang="en-IN" data-ind="general">', `<html lang="en-IN" data-ind="${a.key}" data-ind-from="page">`)
     .replace(/<title>[^<]*<\/title>/, `<title>${escAttr(a.title)}</title>`)
     .replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${escAttr(a.description)}">`)
@@ -283,6 +306,10 @@ function industryPage(slug) {
   return html;
 }
 
+app.get(["/", "/index.html"], (_req, res) => {
+  res.setHeader("Cache-Control", "no-cache");
+  res.type("html").send(homePage());
+});
 app.get(Object.keys(INDUSTRY_PAGES).map((s) => `/${s}`), (req, res) => {
   res.setHeader("Cache-Control", "no-cache");
   res.type("html").send(industryPage(req.path.slice(1).replace(/\/+$/, "")));
