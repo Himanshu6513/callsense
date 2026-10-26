@@ -4,10 +4,15 @@
   "private": true,
   "type": "module",
   "description": "CallSense (callsense.in) marketing site and trial-request backend (Express + Postgres)",
-  "scripts": { "start": "node src/server.js" },
+  "scripts": {
+    "start": "node src/server.js"
+  },
   "dependencies": {
     "express": "^4.21.2",
+    "nodemailer": "^6.9.16",
     "pg": "^8.13.1"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  }
 }

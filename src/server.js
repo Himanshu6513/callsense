@@ -5,6 +5,8 @@ import pg from "pg";
 import path from "node:path";
 import fs from "node:fs";
 import { fileURLToPath } from "node:url";
+import { notifyLead } from "./notify.js";
+import { visitLogger, visitsSchema } from "./visits.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC_DIR = path.join(__dirname, "..", "public");
@@ -50,7 +52,7 @@ ALTER TABLE callsense_leads ADD COLUMN IF NOT EXISTS request_type TEXT;
 ALTER TABLE callsense_leads ALTER COLUMN company DROP NOT NULL;
 ALTER TABLE callsense_leads ALTER COLUMN industry DROP NOT NULL;
 COMMENT ON TABLE callsense_leads IS 'Demo and report requests from callsense.in. status: new / contacted / won / lost.';
-`;
+${visitsSchema("callsense_visits")}`;
 
 let dbReady = false;
 async function initDb() {
@@ -226,6 +228,7 @@ app.post("/api/leads", express.json({ limit: "20kb" }), async (req, res) => {
     );
     console.log(`New ${lead.request_type} request (industry=${lead.industry}).`);
     res.status(201).json({ ok: true });
+    notifyLead("callsense.in", lead);
   } catch (e) {
     console.error("Insert failed:", e.message);
     res
@@ -305,6 +308,8 @@ function industryPage(slug) {
   pageCache.set(slug, html);
   return html;
 }
+
+app.use(visitLogger(pool, "callsense_visits", () => dbReady));
 
 app.get(["/", "/index.html"], (_req, res) => {
   res.setHeader("Cache-Control", "no-cache");
